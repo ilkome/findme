@@ -542,13 +542,13 @@ main .wrap {
 }
 main .wrap .bg {
   position: absolute;
-  right: -130px;
+  right: -80px;
   margin-top: -5px;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 925px;
+  width: 771px;
   height: 694px;
   background: url("../img/macbook.png") right center no-repeat;
 }
