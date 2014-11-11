@@ -462,6 +462,8 @@ body a {
 }
 header {
   display: table-cell;
+  position: relative;
+  z-index: 5;
 }
 header .wrap {
   display: table;
