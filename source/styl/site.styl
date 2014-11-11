@@ -355,13 +355,18 @@ header
 		border-radius 4px;
 		table
 			width 100%;
+			table-layout fixed
 			td
 				text-align center;
 				vertical-align middle;
 			td:first-child
 				padding-left 20px;
+				@media wmin
+					padding-left 5px
 			td:last-child
 				padding-right 20px;
+				@media wmin
+					padding-right 5px
 			td.phone
 				white-space nowrap;
 			td.place
@@ -373,6 +378,8 @@ header
 					td
 						background #ffffff; padding 35px 10px;
 						color #828282; font-size 14px; font-weight 400;
+						@media wmin
+							padding 35px 5px
 					td:first-child
 						border-radius 4px 0 0 0; 
 					td:last-child

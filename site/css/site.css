@@ -992,6 +992,7 @@ header .user .enter a:hover {
 }
 .organ-list .table-wrap table {
   width: 100%;
+  table-layout: fixed;
 }
 .organ-list .table-wrap table td {
   text-align: center;
@@ -1000,8 +1001,18 @@ header .user .enter a:hover {
 .organ-list .table-wrap table td:first-child {
   padding-left: 20px;
 }
+@media screen and (max-width: 1700px) {
+  .organ-list .table-wrap table td:first-child {
+    padding-left: 5px;
+  }
+}
 .organ-list .table-wrap table td:last-child {
   padding-right: 20px;
+}
+@media screen and (max-width: 1700px) {
+  .organ-list .table-wrap table td:last-child {
+    padding-right: 5px;
+  }
 }
 .organ-list .table-wrap table td.phone {
   white-space: nowrap;
@@ -1018,6 +1029,11 @@ header .user .enter a:hover {
   color: #828282;
   font-size: 14px;
   font-weight: 400;
+}
+@media screen and (max-width: 1700px) {
+  .organ-list .table-wrap table thead tr td {
+    padding: 35px 5px;
+  }
 }
 .organ-list .table-wrap table thead tr td:first-child {
   border-radius: 4px 0 0 0;
