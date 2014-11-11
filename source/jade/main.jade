@@ -1,0 +1,72 @@
+- var ishome = true
+
+doctype html
+html(lang="ru")
+	include _head
+
+	body
+		#shikarniy
+			.row
+				header
+					.main-width
+						.wrap
+							.logo
+								a(href="/")
+							.menu
+								ul
+									li
+										a(href="search.html") Поиск
+									li
+										a(href="#") Инструкция
+									li
+										a(href="#") Организации
+									li
+										a(href="#") Оферта
+									li
+										a(href="add.html") О проекте
+							.user
+								.enter
+									a(href="add.html") Войти
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			.row
+				main
+					.main-cell
+						.main-width
+							.wrap
+								.bg
+								.text
+									h1 
+										| Сервис по поиску
+										span пропавших людей
+									.desc Каждый день в больницы Москвы поступает около 60 человек, которые по той или иной причине не могут связаться со своими родными. Мы сделали все возможное, чтобы доступ к информации об этих людях для их родных и близких стал максимально простым и удобным. Чтобы они могли быть вместе в трудную минуту.
+									.search
+										form(action="search.html")
+											input(type="text", placeholder="Описание пропавшего")
+											input(type="submit", value="Найти")
+									.war
+										| Пользуясь сервисом вы соглашаетесь с условиями 
+										a(href="#") оферты
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			.row
+				footer
+					.main-width
+						.gov
+							a(href="#")
+						.share
+							ul
+								li.fb
+									a(href="#")
+								li.tw
+									a(href="#")
+								li.g
+									a(href="#")
+								li.p
+									a(href="#")
+								li.vk
+									a(href="#")
+								li.o
+									a(href="#")
+						.contacts
+							p 
+								a(href="#") findme@mos.ru
+							p 8 800 XXX-XX-XX

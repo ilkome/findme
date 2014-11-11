@@ -1,0 +1,158 @@
+doctype html
+html(lang="ru")
+	include _head
+
+	body
+		#shikarniy
+			.hide
+				.popup-small.remodal(data-remodal-id="login-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bname
+						h3 Вход
+					.bcontent
+						input(type="text", placeholder="Фамилия")
+						input(type="text", placeholder="Имя")
+					.action
+						a(href="#").remodal-ok Войти
+					.ext
+						a(href="#") Восстановить пароль
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.popup-small.remodal(data-remodal-id="forgot-password-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bname
+						h3 Восстановление пароля
+					.bcontent
+						input(type="text", placeholder="Введите ваш е-мейл")
+					.action.nopad
+						a(href="#").remodal-ok Отправить новый пароль
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.popup-med.remodal(data-remodal-id="remain-phone-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bdesc На номер телефона, привязанный к вашей учетной записи отправлен одноразовый пароль для входа в систему
+					.bcontent
+						input(type="text", placeholder="Введите пароль")
+					.action
+						a(href="#").remodal-ok Войти
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.popup-med.remodal(data-remodal-id="delete-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bdesc Вы действительно хотите удалить все <br>внесенные изменения?
+					.action
+						a(href="#").shot.mar.remodal-cancel Нет
+						a(href="#").shot.mar.remodal-ok Да
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.popup-med.remodal(data-remodal-id="addok-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bdesc Пациент успешно добавлен <br>в систему
+					.action
+						a(href="#").remodal-ok Вернуться на домашнюю страницу
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.popup-med.remodal(data-remodal-id="photo-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bname
+						h3 Восстановление пароля
+					.bdesc.small Каждый день в больницы Москвы поступает около 60 человек, которые по той или иной причине не могут связаться со своими родными.
+					.items
+						.item.mfc
+							.item-name МФЦ
+							.item-text Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+							.item-more
+								a(href="#") Подробнеее
+						.item.phone
+							.item-name Телефон
+							.item-text Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+							.item-more
+								a(href="#") Подробнеее
+						.item.note
+							.item-name Ноутбук
+							.item-text Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации
+							.item-more
+								a(href="#") Подробнеее
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.popup-med.remodal(data-remodal-id="reg-popup")
+					.close
+						a(href="#").remodal-cancel
+					.bname
+						h3 Регистрация
+					.bdesc.small Каждый день в больницы Москвы поступает около 60 человек, которые по той или иной причине не могут связаться со своими родными. Мы сделали все возможное, чтобы доступ к информации об этих людях для их родных и&nbsp;близких стал максимально простым и&nbsp;удобным. Чтобы они могли быть вместе в трудную минуту.
+					.lines
+						.line
+							.fl-left
+								input(type="text", placeholder="Названия организации")
+							.fl-right
+								input(type="text", placeholder="ФИО владельца аккаунта")
+						.line
+							.fl-left
+								input(type="text", placeholder="Почта")
+							.fl-right
+								input(type="text", placeholder="Телефон")
+						.line
+							.fl-left
+								input(type="text", placeholder="Пароль")
+							.fl-right
+								input(type="text", placeholder="Повторите пароль")
+						.agree
+							input(id="radio-val1" type="checkbox" name="checkbox").lightblue
+							label(for="radio-val1") Согласен(на) с условиями оферты
+					.action
+						a(href="#").remodal-ok Отправить заявку на регистрацию
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			header
+				.main-width
+					.wrap
+						.logo
+							a(href="/")
+						.menu
+							ul
+								li
+									a(href="search.html") Поиск
+								li
+									a(href="#") Инструкция
+								li
+									a(href="#") Организации
+								li
+									a(href="#") Оферта
+								li
+									a(href="#") О проекте
+						.user
+							.enter
+								a(href="add.html") Войти
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			main
+				.about-box
+					.block-text
+						.main-width
+							h2 Окошки
+							ul
+								li
+									a(href="#login-popup") Вход
+								li
+									a(href="#forgot-password-popup") Восстановление пароля
+								li
+									a(href="#remain-phone-popup") На номер телефона
+								li
+									a(href="#delete-popup") Удалить все изменения
+								li
+									a(href="#photo-popup") Фотография
+								li
+									a(href="#reg-popup") Регистрация
+								li
+									a(href="#addok-popup") Пациент успешно добавлен
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			.footer-fix
+			footer
+				.main-width
+					.wrap
+						.ins
+							.gov
+								a(href="#") 
+							.contacts
+								p 
+									a(href="#") findme@mos.ru
+								p 8 800 XXX-XX-XX

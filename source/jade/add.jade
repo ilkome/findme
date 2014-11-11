@@ -1,0 +1,336 @@
+doctype html
+html(lang="ru")
+	include _head
+
+	body
+		#shikarniy
+			header
+				.main-width
+					.wrap
+						.logo
+							a(href="/")
+						.menu
+							ul
+								li
+									a(href="search.html") Поиск
+								li
+									a(href="#") Инструкция
+								li
+									a(href="#") Организации
+								li
+									a(href="#") Оферта
+								li
+									a(href="#") О проекте
+						.user
+							.enter
+								a(href="add.html") Войти
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			main
+				.main-width
+					.wrap
+						.people-add
+							.bname
+								h2
+									| Общая информация
+									span.ask-pop
+								.ask-pop-text Здесь будет подсказка, которая расскажет о том, как пользоваться этим разделом
+							.bbox
+								.rowid 
+									span ID 8152
+									input(type="checkbox" id="chb_2" class="light")
+									label(for="chb_2" class="css-label") Пациент дал осознанное согласие на внесение информации о нем в базу
+								.line3
+									.cell
+										input(type="text", placeholder="Фамилия")
+									.cell
+										input(type="text", placeholder="Имя")
+									.cell
+										input(type="text", placeholder="Отчество")
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Источник данных
+												span.arrow
+											ul.option-list
+												li(data-value="1") Документ (из списка)
+												li(data-value="2") Cо слов скорой / полиции (контакт)
+												li(data-value="2") Со слов пациента
+
+								.sex
+									input(id="radio-val1" type="radio" name="radio" checked)
+									label(for="radio-val1") Мужчина
+									input(id="radio-val2" type="radio" name="radio")
+									label(for="radio-val2") Женщина
+							.bname
+								h2
+									| Описание
+									span.ask-pop
+								.ask-pop-text Здесь будет подсказка, которая расскажет о том, как пользоваться этим разделом
+							.bbox
+								.ranges
+									.item
+										.title
+											span Рост
+											span.count см
+										.range-growth
+											input(type="text" name="example_name")
+									.item
+										.title
+											span Возраст
+											span.count лет
+										.range-age
+											input(type="text" name="example_name")
+								.line4
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Телосложение
+												span.arrow
+											ul.option-list
+												li(data-value="1") Худощавое
+												li(data-value="2") Нормальное
+												li(data-value="2") Полное
+												li(data-value="2") Очень полное
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Цвет волос
+												span.arrow
+											ul.option-list
+												li(data-value="2") Брюнет
+												li(data-value="2") Шатен
+												li(data-value="2") Рыжий
+												li(data-value="2") Русый
+												li(data-value="2") Блондин
+												li(data-value="2") Седой
+												li(data-value="2") Прочее
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Цвет глаз
+												span.arrow
+											ul.option-list
+												li(data-value="2") Синий
+												li(data-value="2") Голубой
+												li(data-value="2") Серый
+												li(data-value="2") Зеленый
+												li(data-value="2") Янтарный
+												li(data-value="2") Карий
+												li(data-value="2") Прочее
+								.chkb-list
+									.chkb-cell
+										.chkb-line
+											strong Приметы:
+										.chkb-line
+											input(type="checkbox" id="chb_2" class="light")
+											label(for="chb_2" class="css-label") Шрамы
+										.chkb-line
+											input(type="checkbox" id="chb_3" class="light")
+											label(for="chb_3" class="css-label") Тату
+										.chkb-line
+											input(type="checkbox" id="chb_1" class="light")
+											label(for="chb_1" class="css-label") Протезы
+										.chkb-line
+											input(type="checkbox" id="chb_4" class="light")
+											label(for="chb_4" class="css-label") Отсутствие конечностей
+								.line4
+									textarea(name="", cols="30", rows="10", placeholder="Комментарии. Cледует указывать место тату и описывать содержание, можно с фото. Шрамы - место, длина шва.)")
+							.bname
+								h2 
+									| Место и обстоятельства обнаружения
+									span.ask-pop
+								.ask-pop-text Здесь будет подсказка, которая расскажет о том, как пользоваться этим разделом
+							.bbox
+								.line2
+									input(type="text", placeholder="Дата обнаружения")
+								.line3
+									.cell
+										input(type="text", placeholder="Адресс")
+									.cell
+										input(type="text", placeholder="Район")
+									.cell
+										input(type="text", placeholder="Округ")
+									.cell
+										input(type="text", placeholder="Город")
+								.comebak
+									strong Кто привез:
+									input(id="radio-val55" type="radio" name="radio" checked)
+									label(for="radio-val55") Полиция
+									input(id="radio-val66" type="radio" name="radio")
+									label(for="radio-val66") Скорая
+									input(id="radio-val77" type="radio" name="radio")
+									label(for="radio-val77") Прохожие привели
+								.line3
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Головной убор
+												span.arrow
+											ul.option-list
+												li(data-value="2") Шапка меховая
+												li(data-value="2") Кепка
+												li(data-value="2") Шляпа
+												li(data-value="2") Шапка вязанная
+												li(data-value="2") Головной убор
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Верхняя одежда
+												span.arrow
+											ul.option-list
+												li(data-value="2") Куртка
+												li(data-value="2") Пальто
+												li(data-value="2") Дубленка
+												li(data-value="2") Шуба
+												li(data-value="2") Плащ
+												li(data-value="2") Другое
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Штаны
+												span.arrow
+											ul.option-list
+												li(data-value="2") Брюки
+												li(data-value="2") Джинсы
+												li(data-value="2") Спортивные штаны
+												li(data-value="2") Шорты
+												li(data-value="2") Другое
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Обувь
+												span.arrow
+											ul.option-list
+												li(data-value="2") Сапоги
+												li(data-value="2") Ботинки
+												li(data-value="2") Туфли
+												li(data-value="2") Кроссовки
+												li(data-value="2") Кеды
+												li(data-value="2") Тапочки
+												li(data-value="2") Босоножки-сандали
+												li(data-value="2") Без обуви
+								.line3
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Цвет головного убора
+												span.arrow
+											ul.option-list
+												li(data-value="2") Черный/Белый
+												li(data-value="2") Цветной/прочий
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Цвет верхней одежды
+												span.arrow
+											ul.option-list
+												li(data-value="2") Черный/Белый
+												li(data-value="2") Цветной/прочий
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Цвет штанов
+												span.arrow
+											ul.option-list
+												li(data-value="2") Черный/Белый
+												li(data-value="2") Цветной/прочий							
+									.cell
+										.select-wrap.white
+											input(type="hidden" name="" value="")
+											.select
+												span.title Цвет обуви
+												span.arrow
+											ul.option-list
+												li(data-value="2") Черный/Белый
+												li(data-value="2") Цветной/прочий
+								.line1
+									.cell
+										textarea(name="", cols="30", rows="10", placeholder="При себе имел")
+									.cell
+										textarea(name="", cols="30", rows="10", placeholder="Обстоятельства обнаружения")
+							.bname
+								h2 
+									| Прочее
+									span.ask-pop
+								.ask-pop-text Здесь будет подсказка, которая расскажет о том, как пользоваться этим разделом
+							.bbox
+								.avatar
+									.prev
+										a(href="#")
+											img(src="img/ava.png", alt="")
+									.upload
+										a(href="#") Загрузить фото пациента
+							.bname
+								h2 
+									| Заявитель
+									span.ask-pop
+								.ask-pop-text Здесь будет подсказка, которая расскажет о том, как пользоваться этим разделом
+							.bbox
+								.line4.spad
+									.cell
+										input(type="text", placeholder="Фамилия")
+									.cell
+										input(type="text", placeholder="Имя")
+									.cell
+										input(type="text", placeholder="Отчество")
+								.line4
+									.cell
+										input(type="text", placeholder="Телефон")
+									.cell
+										input(type="text", placeholder="Дополнитный телефон")
+									.cell
+										input(type="text", placeholder="E-mail")
+							.bname
+								h2 
+									| Местонахождение
+									span.ask-pop
+								.ask-pop-text Здесь будет подсказка, которая расскажет о том, как пользоваться этим разделом
+							.bbox
+								.line3
+									.cell
+										input(type="text", placeholder="Название учреждения")
+									.cell
+										input(type="text", placeholder="Город")
+									.cell
+										input(type="text", placeholder="Округ")
+									.cell
+										input(type="text", placeholder="Адрес")
+								.line3
+									.cell
+										input(type="text", placeholder="Телефон")
+									.cell
+										input(type="text", placeholder="E-mail")
+									.cell
+										input(type="text", placeholder="Сайт")
+									.cell
+										input(type="text", placeholder="Режим работы")
+							.action
+								a(href="#").cancel Отмена
+								a(href="#").save Сохранить пациента							
+										
+
+
+
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.footer-fix
+				footer
+					.main-width
+						.wrap
+							.ins
+								.gov
+									a(href="#") 
+								.contacts
+									p 
+										a(href="#") findme@mos.ru
+									p 8 800 XXX-XX-XX

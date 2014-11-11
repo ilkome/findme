@@ -1,0 +1,94 @@
+doctype html
+html(lang="ru")
+	include _head
+
+	body
+		#shikarniy
+			.hide
+				.leave-review-pop.remodal(data-remodal-id="leave-review-pop")
+					.ins
+						.close
+							a(href="#").remodal-cancel
+						.bname
+							h3 Оставить отзыв
+						.bcontent
+							input(type="text", placeholder="Фамилия")
+							input(type="text", placeholder="Имя")
+							textarea(placeholder="Текст отзыва")
+						.action
+							a(href="#").remodal-cancel Оставить отзыв
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			header
+				.main-width
+					.wrap
+						.logo
+							a(href="/")
+						.menu
+							ul
+								li
+									a(href="search.html") Поиск
+								li
+									a(href="#") Инструкция
+								li
+									a(href="#") Организации
+								li
+									a(href="#") Оферта
+								li
+									a(href="#") О проекте
+						.user
+							.enter
+								a(href="add.html") Войти
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			main
+				.about-box
+					.block-text
+						.main-width
+							h2 О проекте
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta vel commodi laudantium officiis ipsum est aliquid dolore omnis, facilis molestiae dicta ipsam aperiam corporis minima mollitia iusto voluptatibus asperiores, nemo nesciunt nobis reiciendis unde odit consequatur maxime. Natus accusamus veritatis blanditiis nemo aliquid hic! Explicabo, hic temporibus repudiandae minus cum ducimus odit atque laborum excepturi odio. Saepe omnis tenetur repudiandae est quo neque doloremque dignissimos, perferendis alias, quas vero quaerat! Explicabo distinctio ullam aspernatur iusto. Natus numquam, neque eligendi assumenda.		
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit deserunt quos veniam in odio esse atque sequi ratione at fugiat dolorem, ullam et repellendus, cumque mollitia! Temporibus cupiditate, in recusandae enim, aperiam id placeat eum saepe ad provident vero natus laboriosam corporis incidunt dolorum pariatur vitae beatae et ducimus? Minima.
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aspernatur cupiditate consectetur ex optio mollitia corrupti porro ipsa veniam ut dolor suscipit eum in voluptate explicabo quas commodi omnis fugit nemo nisi veritatis non sit. Dolore ab vero hic, sapiente quae facere, repellendus atque provident, veniam similique maiores a error pariatur nemo eaque dolorum! Mollitia debitis, illum in aspernatur beatae, esse consequatur non molestias a fuga excepturi vero laudantium voluptatem velit omnis quasi dicta error facilis rerum repellendus ad, sit accusamus deleniti. Ipsum possimus quasi quo magni ipsam doloremque, quas quidem eius sint accusantium unde suscipit tempore alias, culpa deleniti?
+					.block-reviews
+						.main-width
+							h2 Отзывы
+							.slider
+								.slide
+									.prev
+										img(src="img/content/avatar5.png", alt="")
+									.name Анастасия Воробьева
+									.post Мед. работник поликлиники им. Астахова
+									.text Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+								.slide
+									.prev
+										img(src="img/content/ava1.png", alt="")
+									.name Анастасия Воробьева
+									.post Мед. работник поликлиники им. Астахова
+									.text Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+								.slide
+									.prev
+										img(src="img/content/ava2.png", alt="")
+									.name Анастасия Воробьева
+									.post Мед. работник поликлиники им. Астахова
+									.text Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+							.action
+								a(href="#leave-review-pop") Оставить отзыв
+					.block-contacts
+						.main-width
+							h2 Контактная информация
+							span.sep ~
+							ul
+								li.phone 
+									span 8 800 XXX-XX-XX
+								li.email
+									a(href="#") findme@mos.ru
+				//- - - - - - - - - - - - - - - - - - - - - - - - -
+				.footer-fix
+				footer
+					.main-width
+						.wrap
+							.ins
+								.gov
+									a(href="#") 
+								.contacts
+									p 
+										a(href="#") findme@mos.ru
+									p 8 800 XXX-XX-XX

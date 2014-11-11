@@ -1,0 +1,52 @@
+doctype html
+html(lang="ru")
+	include _head
+
+	body
+		#shikarniy
+			header
+				.main-width
+					.wrap
+						.logo
+							a(href="/")
+						.menu
+							ul
+								li
+									a(href="search.html") Поиск
+								li
+									a(href="#") Инструкция
+								li
+									a(href="#") Организации
+								li.active
+									a(href="#") Оферта
+								li
+									a(href="#") О проекте
+						.user
+							.enter
+								a(href="add.html") Войти
+				.topfilter.topfilter-small.main-width
+					.wrap.wrap-small
+						.filter
+							ul
+								li.full.active
+									a(href="#")
+								li.list
+									a(href="organisation-list.html")
+						.search
+							form(action="#")
+								input(type="text", placeholder="")
+								input(type="submit", value="Найти")
+			//- - - - - - - - - - - - - - - - - - - - - - - - -
+			main.map-wrapper#map
+				
+				
+			footer
+				.main-width
+					.wrap
+						.ins
+							.gov
+								a(href="#") 
+							.contacts
+								p 
+									a(href="#") findme@mos.ru
+								p 8 800 XXX-XX-XX

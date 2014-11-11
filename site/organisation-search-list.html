@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <!--	proscom.ru-->
+  <!--	Простые Коммуникации-->
+  <head>
+    <title>FindMe</title>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=1230">
+    <!-- Styles-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/jquery.remodal.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <!-- Scripts-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/ion.rangeSlider.min.js" type="text/javascript"></script>
+    <script src="js/jquery.remodal.js" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;" type="text/javascript"></script>
+    <script src="js/infoBubble.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script><!--[if lte IE 9]>
+    <script src="js/jquery.placeholder.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      	$.Placeholder.init();
+      });
+    </script><![endif]-->
+  </head>
+  <div class="system-menu"><a href="about.html">about </a><a href="add.html">add </a><a href="instruction.html">instruction </a><a href="main.html">main</a><a href="offer.html">offer</a><a href="organisation.html">organisation</a><a href="organisation-list.html">organisation-list</a><a href="organisation-search-list.html">organisation-search-list</a><a href="organisation-search-map.html">organisation-search-map</a><a href="popups.html">popups</a><a href="search-list.html">search-list</a><a href="search.html">search</a><a href="show.html">show</a>
+    <style>
+      .system-menu {position: fixed; width:30px; z-index: 999; background: #fff; opacity:0; overflow:hidden;}
+      .system-menu:hover {width:auto; opacity: 1;}
+      .system-menu a {display:block; padding:5px 10px; font-size:12px; color: grey;}
+      .system-menu a:hover {background:#e6e6e6; text-decoration:none;}
+      .system-menu p.sep {margin:0; padding:5px 10px; min-height:2px; font-size:12px; border-top: 2px solid grey;}
+    </style>
+  </div>
+  <body>
+    <div id="shikarniy">
+      <div class="hide">
+        <div data-remodal-id="people-popup" class="people-popup remodal">
+          <div class="people-item">
+            <div class="leftbl">
+              <div class="prevbl">
+                <div class="name">Сидоров Константин Викторович</div>
+                <div class="source"><strong>Источник данных: </strong>Со слов пациента </div>
+                <div class="sex m">Мужчина</div>
+                <div class="askphoto"><a class="big">&nbsp;</a>
+                  <div class="menu-big">
+                    <ul>
+                      <li><a href="#">Запросить фотографию</a></li>
+                      <li><a href="#">Отметить как найденного</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pic n">
+                  <div class="avatar">
+                    <div class="no-avatar"></div>
+                  </div>
+                </div>
+                <div class="colors">
+                  <div class="item">
+                    <div class="text">Голубой</div>
+                    <div class="prev">
+                      <div class="color color9"></div>
+                    </div>
+                    <div class="title">Цвет глаз</div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="item item-2">
+                    <div class="text">Рыжий</div>
+                    <div class="prev">
+                      <div class="color color3"></div>
+                    </div>
+                    <div class="title">Цвет волос</div>
+                  </div>
+                </div>
+                <div class="spec">
+                  <div class="item">
+                    <div class="graph graph1"></div>
+                    <div class="count">36 - 40</div>
+                    <div class="desc">лет</div>
+                    <div class="title">Возраст </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="item item-2">
+                    <div class="graph graph1"></div>
+                    <div class="count">172</div>
+                    <div class="desc">см</div>
+                    <div class="title">Рост</div>
+                  </div>
+                </div>
+                <div class="viewbl">
+                  <div class="title">телосложение</div>
+                  <div class="text">Атлетическое</div>
+                </div>
+              </div>
+              <div class="inform">
+                <ul>
+                  <li class="hat">
+                    <div class="inform-n">Шапка</div>
+                    <div class="inform-f"><span class="blue1"></span></div>
+                  </li>
+                  <li class="jacket">
+                    <div class="inform-n">Куртка</div>
+                    <div class="inform-f"><span class="blue2"></span></div>
+                  </li>
+                  <li class="jeans">
+                    <div class="inform-n">Джинсы</div>
+                    <div class="inform-f"><span class="blue3"></span></div>
+                  </li>
+                  <li class="shoes">
+                    <div class="inform-n">Туфли</div>
+                    <div class="inform-f"><span class="blue4"></span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="box prim">
+                <div class="bname"> 
+                  <h3>Приметы</h3>
+                </div>
+                <div class="prim-list">
+                  <div class="prim-i">Шрамы</div>
+                  <div class="prim-i">Тату</div>
+                  <div class="prim-i">протезы</div>
+                </div>
+                <div class="btext">Умеренная сутулость, небольшое косоглазие, татуировка китайского дракона, дерущегося с азиатским львом на правом плече, отметка от кольца не безымянном пальце левой руки</div>
+              </div>
+              <div class="boxmap"> 
+                <div class="bname"> 
+                  <h3>Место и обстоятельства обнаружения</h3>
+                </div>
+                <div class="place"><strong>Москва  </strong>(центральный округ)</div>
+                <div class="btext">
+                  <div class="item item1"> 
+                    <p><strong>Комментарии</strong></p>
+                    <p>Синие потертые джинсы с дыркой на правой коленке, кроссовки Nike, синее поло с узором в ромбик на спине и рукавах.</p>
+                  </div>
+                  <div class="item item2"> 
+                    <p><strong>При себе имел</strong></p>
+                    <p>В кармане джинсов - зажигалка и блок сигарет, телефон Nokia, также обнаружена спортивная сумка с документами.</p>
+                  </div>
+                  <div class="item item3">
+                    <p><strong>Обстоятельства обнаружения</strong></p>
+                    <p>В кармане джинсов - зажигалка и блок сигарет, телефон Nokia, также обнаружена спортивная сумка с документами.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="box boxapplicant">
+                <div class="bname"> 
+                  <h3>Заявитель</h3>
+                </div>
+                <div class="btext">
+                  <h4>Сидоров Дмитрий Анатольевич</h4>
+                  <p>~</p>
+                  <p>8 916 485 93 00</p>
+                  <p>Sidorov_Dmitry@mail.ru</p>
+                </div>
+              </div>
+            </div>
+            <div class="rightbl">
+              <div class="nav">
+                <div class="nav-btns"></div>
+                <div class="nav-close close-popup"></div>
+              </div>
+              <div class="found">
+                <div class="date">
+                  <div class="bname">Дата обнаружения</div>
+                  <div class="bcontent">
+                    <div class="item">
+                      <div class="num">24</div>
+                      <div class="day">
+                        <div class="month">09</div>
+                        <div class="year">2014</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="place">
+                  <div class="bname">
+                    <div class="bg">местонахождение</div>
+                  </div>
+                  <div class="bcontent"><strong>Название учреждения</strong>
+                    <p>Мед. Академия им. Шмелева</p><strong>Город</strong>
+                    <p>Москва (центральный округ)</p><strong>Адрес</strong>
+                    <p>ул. Пушкина, д. Калатушкина</p>
+                    <p> <a href="#" class="map">показать на карте</a></p><strong>Телефон</strong>
+                    <p>8 800 40 56 75</p><strong>Адрес сайт</strong>
+                    <p><a href="#" class="site">www.med24.ru</a></p><strong>Режим работы</strong>
+                    <p>Пн-пт, с 8:00 до 18:00; сб, c 10 <br>до 17:00; Вс - выходной</p>
+                  </div>
+                </div>
+              </div>
+              <div class="archive">
+                <div class="bname">Архив изменений</div>
+                <div class="bcontent">
+                  <div class="item"><a href="#">Вчера в 18:20</a>
+                    <p>Со слов пациента - дополнено описание</p>
+                  </div>
+                  <div class="item"><a href="#">Два дня назад в 02:15</a>
+                    <p>Привезли документы - дополнено описание</p>
+                  </div>
+                  <div class="item"><a href="#">Три дня назад в 02:15</a>
+                    <p>Первичный осмотр реанимации - дополнено описание</p>
+                  </div>
+                  <div class="item"><a href="#">Вчера в 18:20</a>
+                    <p>Изменено место пребывание - изменения</p>
+                  </div>
+                  <div class="item"><a href="#">Два дня назад в 02:15</a>
+                    <p>Поступление пациента - создана карточка</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="main-width">
+          <div class="wrap">
+            <div class="logo"><a href="/"></a></div>
+            <div class="menu">
+              <ul>
+                <li><a href="search.html">Поиск</a></li>
+                <li><a href="#">Инструкция</a></li>
+                <li><a href="#">Организации</a></li>
+                <li><a href="#">Оферта</a></li>
+                <li><a href="#">О проекте</a></li>
+              </ul>
+            </div>
+            <div class="user">
+              <div class="enter"><a href="add.html">Войти</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="topfilter">
+        <div class="main-width">
+          <div class="wrap">
+            <div class="filter">
+              <ul>
+                <li class="map"><a href="organisation-search-map.html"></a></li>
+                <li class="list active"><a href="#"></a></li>
+              </ul>
+            </div>
+            <div class="search">
+              <form action="#">
+                <input type="text" placeholder="Поиск">
+                <input type="submit" value="Найти">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="main-width">
+          <div class="wrap">
+            <div class="organ-list">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <td class="name">Название учреждения</td>
+                      <td class="city">Город  </td>
+                      <td class="place">Адрес</td>
+                      <td class="phone">Телефон</td>
+                      <td class="site">Адрес сайта</td>
+                      <td class="moretd"></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="hide2">
+                      <td class="name">Мед </td>
+                      <td class="city">Москва (це  округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">уsideinfosideinfosideinfoки, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr class="hide2">
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr class="hide2">
+                      <td class="name">Мед. Академsideinfosideinfoия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="name">Мед. Академия им. Шмелева</td>
+                      <td class="city">Москва (центральный округ)</td>
+                      <td class="place">
+                        <div class="map"> <a href="#">ул. Мневники, д. 37</a></div>
+                      </td>
+                      <td class="phone"> <span>8 800 40 56 75</span></td>
+                      <td class="site"><a href="#">www.med24.ru</a></td>
+                      <td class="moretd">
+                        <div class="more"><a href="#people-popup">Подробнее									</a></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="sideinfo">
+                <div class="bname">Кто отображается</div>
+                <div class="bcontent"> 
+                  <p>Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.</p>
+                  <ul>
+                    <li><a href="#">Стационары</a></li>
+                    <li class="active"><a href="#">Поликлинники</a></li>
+                    <li><a href="#">Учреждения</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-fix"></div>
+        <footer>
+          <div class="main-width">
+            <div class="wrap">
+              <div class="ins">
+                <div class="gov"><a href="#"> </a></div>
+                <div class="contacts">
+                  <p> <a href="#">findme@mos.ru</a></p>
+                  <p>8 800 XXX-XX-XX</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

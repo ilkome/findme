@@ -1,0 +1,186 @@
+//@import "../fonts/styles.css"
+@import "common.styl"
+
+//	ГЛАВНАЯ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+html
+	height 100%;
+body 
+	color #fff;
+	background #59b0de;
+	width 100%;
+	height 100%;
+	a
+		color #fff;
+
+#shikarniy
+	display table
+	width 100%
+	min-width 1230px;
+	height 1px;
+	height 100%;
+	.main-width 
+		position relative
+		width 1170px; padding 0 30px; margin 0 auto;
+	.row
+		display table-row
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+
+header
+	display table-cell
+	.wrap
+		display table
+		width 100%;
+		padding-top 40px;
+	.logo
+		display table-cell 
+		vertical-align middle
+		a
+			display block; width 144px; height 17px;
+			background url("../img/logo.png") no-repeat;
+			anim-op();
+			&:hover
+				opacity 0.7; 
+	.menu
+		display table-cell 
+		vertical-align middle
+		text-align center
+		ul
+			display inline-block
+			clearfix(); 
+			lino();
+			li
+				float left;
+				padding 0 20px;
+				a
+					padding 10px 15px; font-size 16px;
+					tdn();
+					border-radius 4px;
+					&:hover
+						background #4298c8
+	.user
+		display table-cell 
+		vertical-align middle
+		text-align right
+		.enter
+			a
+				display inline-block; 
+				padding 12px 30px 12px 40px;
+				background #4298c8 url("../img/i-user-enter.png") 22px center no-repeat; 
+				border-radius 5px;
+				tdn();
+				&:hover
+					background-color #388ebf; 
+
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+
+main
+	display table-cell
+	vertical-align middle
+	.wrap
+		position relative;
+		.bg
+			position absolute; right -130px; margin-top -5px; top 50%; transform translateY(-50%);
+
+			width 925px; height 694px; 
+			background url("../img/macbook.png") right center no-repeat;
+		.text
+			position relative; width 530px; padding 100px 0;
+			h1
+				color #fff; font-size 30px; font-weight 500; word-spacing 5px; line-height 35px; letter-spacing 1.5px; text-transform uppercase;
+				span
+					display block; font-weight 500; word-spacing 5px;
+			.desc
+				padding-bottom 30px; font-size 16px; line-height 30px;
+			.war
+				color #c1e7fb; font-size 14px;
+				a
+					color #c1e7fb; text-decoration underline;
+					&:hover
+						tdn();					 
+			.search
+				position relative; padding-bottom 15px;
+				width 460px;
+				input[type="text"]
+					width 100%; full();  
+					color #a6a6a6; font-size 16px; light();
+					height 55px; margin 0; padding 17px 50px;
+					background #eff7fc url("../img/i-search.png") 17px center no-repeat;
+					border-radius 6px; box-shadow 0; border none;
+					anim();
+					&:hover, &:focus
+						background #fff url("../img/i-search.png") 17px center no-repeat;
+				input[type="submit"]
+					position absolute; right 6px; top 6px;
+					height 43px;
+					padding 11px 25px;
+					font-size 14px; regular();
+					border-radius 4px; box-shadow 0;
+					background #4195cf; border none;
+					background linear-gradient(0deg, #4195cf 0%, #51a6d7 100%)
+					anim-all();
+					&:hover
+						background #51a6d7;
+						background linear-gradient(180deg, #51a6d7 0%, #54a0d4 100%)
+				&:hover
+					input[type="text"]
+						background #fff url("../img/i-search.png") 17px center no-repeat;
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+
+footer
+	display table-cell
+	padding-bottom 40px;
+	clearfix();
+	.gov
+		float left;
+		a
+			display block; 
+			width 154px; height 48px; 
+			background url("../img/gov.png") no-repeat;
+			anim-op();
+			&:hover
+				opacity 0.7; 
+	.share
+		position absolute; left 42%; top 10px; width 250px; 
+		ul
+			lino(); clearfix();
+			li
+				float left; padding 0 3%;
+				a
+					display block; width 26px; height 26px;
+					background url("../img/cocial-home.png") no-repeat;
+					transition none;
+			li.fb
+				a
+					background-position 0 0px; 
+					&:hover
+						background-position 0 -26px;
+			li.tw
+				a
+					background-position -26px 0px; 
+					&:hover
+						background-position -26px -26px;
+			li.g
+				a
+					background-position -52px 0px; 
+					&:hover
+						background-position -52px -26px;
+			li.p
+				a
+					background-position -78px 0px; 
+					&:hover
+						background-position -78px -26px;
+			li.vk
+				a
+					background-position -104px 0px; 
+					&:hover
+						background-position -104px -26px;
+			li.o
+				a
+					background-position -130px 0px; 
+					&:hover
+						background-position -130px -26px;
+	.contacts
+		float right;
+		p
+			margin-bottom 5px;		

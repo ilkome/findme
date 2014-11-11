@@ -1,0 +1,310 @@
+
+/*
+	proscom.ru
+	Илья Шикарный 
+	Простые Коммуникации
+*/
+
+
+//	ГЛОБАЛЬНЫЙ СБРОС
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+html, body
+	position relative; height 100%;
+	overflow: auto !important;
+*
+	margin 0; padding 0; border 0; outline 0;
+
+
+
+//	ПОЛЕЗНОСТИ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+clearfix()
+	&:before
+	&:after
+		content ""; display table; clear both;
+pointer()
+	cursor pointer
+full()
+	box-sizing border-box;
+mrno()
+	margin 0;
+pdno()
+	padding 0;
+cover()
+	background-size cover;
+hide()
+	display none;
+tdn()
+	text-decoration none;
+tdu()
+	text-decoration underline;
+
+anim()
+	transition 0.3s ease-out;
+anim-all()
+	transition all 0.3s ease-out;
+anim-bg()
+	transition background-image 0.3s ease-out;
+anim-color()
+	transition color 0.3s ease-out;
+anim-op()
+	transition opacity 0.3s ease-out;
+
+.clear
+	clearfix()
+.hide
+	hide()
+.float-right
+	float right;
+
+
+//	ТЕКСТ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+OpenSans()
+	font-family 'Open Sans', sans-serif
+light()
+	font-weight 300;
+regular()
+	font-weight 400;
+semibold()
+	font-weight 600;
+bold()
+	font-weight 700;
+.align-center
+	text-align center;
+
+p
+	margin-bottom 20px; line-height normal;
+body
+	font-size 14px; color #21282d; OpenSans(); light(); line-height normal;
+
+
+
+//	СПИСКИ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+ul
+	margin 0 0 15px 0;
+	li
+		margin 0 0 15px 15px; list-style square inside;
+		ul, ol
+			margin 15px 0 10px 0;
+ol
+	margin 0 0 15px 0;
+	li
+		margin 0 0 15px 15px; list-style decimal inside;
+		ul, ol
+			margin 15px 0 10px 0;
+lino()
+	margin 0; list-style none
+	li
+		margin 0;
+		list-style none;
+
+ol.float, ul.float
+	clearfix()
+	li 
+		float left; width 50%; margin-left 0; full();
+ul.mrno
+	margin 0;
+
+
+
+//	ССЫЛКИ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+a
+	color #4f96fe; text-decoration none; anim-all(); cursor pointer;
+	&:hover
+		text-decoration underline;
+	&.active 
+		cursor default; text-decoration none;
+
+li.active a 
+	cursor default; text-decoration none;
+
+
+
+//	ЗАГОЛОВКИ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+h1, h2, h3, h4, h5, h6
+	margin 0 0 30px 0;
+	color #4e5255; OpenSans(); light();
+h1
+	font-size 18px;
+h2
+	font-size 18px;
+h3
+	font-size 18px
+h4
+	font-size 16px
+
+
+
+//	ИНПУТЫ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+label, input, button, select, textarea
+	color #fff; font-size 14px; OpenSans();
+
+select
+	width 260px; margin 0 0 10px 0; padding 10px; full();
+	background #fff; border 2px solid #cacaca;  
+
+input[type="text"], input[type="password"], input[type="email"], input[type="phone"]
+	width 300px; margin-bottom 10px; padding 15px 15px; full();
+	background #51a8d9; border 2px solid #51a8d9; border-radius 4px;
+	anim(); 
+	&:hover
+		border-color #8cc9eb;
+	&:focus
+		border-color #8cc9eb;
+	&.error
+		border-color #e44343; color #e44343; 
+	&.valid
+		border-color #3ac020;
+		
+input[type="submit"]
+	width auto; padding 15px 30px; color #fff; font-size 18px;
+	border none; border-bottom 2px solid #00803b; border-radius 3px;
+	cursor pointer;
+	anim();
+	&:hover
+		background #1aa257;
+	&:active
+		opacity 0.8;
+
+textarea
+	width 238px; max-width 100%; height 100px; margin-bottom 10px; padding 15px; full();
+	background #51a8d9; border 2px solid #51a8d9; border-radius 4px;
+	overflow auto; 
+	color #fff; 
+	anim();
+	&:hover
+		border-color #8cc9eb;
+	&:focus
+		border-color #8cc9eb;
+	&.error
+		border-color #ff0000
+	&.valid
+		border-color #3ac020
+
+input[type=checkbox]
+	overflow hidden; 
+	display  none;
+	position absolute; width 10px; height 10px; margin 0; padding 0; border 0;
+input[type=checkbox] + label
+	display inline-block;
+	height 20px; padding-left 30px;
+	font-size 14px; line-height 21px; vertical-align middle;
+	cursor pointer;
+	background url("../img/checkbox.png") no-repeat;
+input[type=checkbox].lightblue + label
+	background url("../img/checkbox4.png") no-repeat;
+input[type=checkbox].light + label
+	background url("../img/checkbox3.png") no-repeat;
+input[type=checkbox] + label:hover
+	background-position 0 -20px; 
+input[type=checkbox]:checked + label
+	background-position 0 -40px;
+
+	
+input[type="radio"] + label 
+	cursor:pointer; font-size:14px; line-height:30px; margin:0px 10px;
+input[type="radio"] + label::before 
+	content:""; display:inline-block; height:20px; width:20px; margin:0 10px -5px 0px; 
+	background:url("../img/radio.png") no-repeat;
+input[type="radio"]
+	display:none;
+input[type="radio"]:disabled + label 
+	cursor:default;
+input[type="radio"] + label:hover::before
+	background-position -20px 0px;
+input[type="radio"]:checked + label::before 
+	background-position -40px 0px;
+input[type="radio"]:disabled + label::before 
+	background-position:0px 0px;
+input[type="radio"]:checked:disabled + label::before 
+	background-position -40px 0px;
+	
+
+//	ТАБЛИЦЫ
+// = = = = = = = = = = = = = = = = = = = = = = = = //
+table
+	width 100%;
+	td
+		vertical-align top;
+
+
+.select-wrap
+	position relative; width 100%; full(); font-size 14px; margin-bottom 10px; text-align left; color #fff;
+	&:hover
+		.select
+			border-color #1d6c99; 
+	.select
+		position relative; width 100%; full(); height 50px; padding 13px 15px; 
+		background #2c7aa7; border 2px solid #2c7aa7; border-radius 4px; cursor pointer;
+		white-space nowrap;
+		anim();
+		.title
+				padding 0 !important;
+				color #fff;
+		&.active
+			border-radius 4px 4px 0 0;
+			border-color #1d6c99;
+			.arrow
+				transform rotate(180deg); 
+		.arrow
+			position absolute; width 8px; height 4px; right 10px; top 21px; content " ";
+			background url("../img/arrow-b-down.png") 0 0 no-repeat;
+			anim();
+	ul.option-list
+		display:none; overflow hidden; z-index 6; 
+		position absolute; left 0; top 47px; width 100%; full(); border-radius 0 0 4px 4px;
+		lino();
+		background #2c7aa7; border 2px solid #1d6c99; border-top none;
+		li
+			padding 10px 15px; 
+			cursor pointer;
+			&:hover
+				color #fff; background #51a8d9; 
+			&.active
+				color #fff; background #60b7e8; cursor default;
+		li:last-child
+			border-bottom none;
+	&.relative
+		ul.option-list
+			position relative; left 0; top 0;
+	&.light
+		.select
+			background #51a8d9; border-color #51a8d9;
+			&.active
+				border-color #8cc9eb; 
+		&:hover
+			.select	
+				border-color #8cc9eb; 
+		ul.option-list
+			background #51a8d9; border-color #8cc9eb;
+			li
+				&:hover
+					background #378ebf; 
+				&.active
+					background #2c7aa7; cursor default;
+	&.white
+		color #828282; 
+		.select
+			color #828282; 
+			background #f1f1f1; border-color #f1f1f1;
+			&.active
+				background #f1f1f1; border-color #D9D9D9;
+			.title
+				color #828282;
+			.arrow
+				background url("../img/arrow-b-down2.png") 0 0 no-repeat;
+		&:hover
+			.select	
+				border-color #D9D9D9; 
+		ul.option-list
+			background #f1f1f1; border-color #D9D9D9;
+			li
+				&:hover
+					background #d9d9d9; 
+				&.active
+					background #cfcfcf; cursor default;

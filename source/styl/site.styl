@@ -1,0 +1,2155 @@
+@import "common.styl"
+wmin = "screen and (max-width:1700px)"
+
+
+
+// ===============================================
+body 
+	color #4d4d4d; background #f0f0f0;
+#shikarniy
+	display table 
+	position relative;
+	width 100%
+	min-width 1230px;
+	height 100%;
+.main-width 
+	min-width 1170px; max-width 1800px; padding 0 30px; margin 0 auto;
+.row
+	display table-row
+.align-center
+	text-align center
+a.btn-blue
+	position relative;
+	display inline-block;
+	margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+	color #fff; tdn(); 
+	background #60b7e8;
+	&:hover
+		background-color #77c1eb;
+a.btn-blue-big
+	@extends a.btn-blue
+	padding 10px 25px
+	
+.pad30t10b
+	padding 30px 0 10px 0
+
+
+//	ШАПКА
+// ===============================================
+header
+	display block
+	position relative;
+	width 100%
+	background #4d4d4d; 
+	.wrap
+		display table
+		width 100%;
+		padding 25px 0;
+		full() 
+		&-small
+			padding: 0
+	.logo
+		display table-cell
+		vertical-align middle
+		a
+			display block; width 144px; height 17px;
+			background url("../img/logo2.png") no-repeat;
+			anim-op();
+			&:hover
+				opacity 0.7; 
+	.menu
+		display table-cell
+		vertical-align middle
+		text-align center
+		padding 0 100px
+		full() 
+		ul
+			clearfix(); 
+			lino();
+			display inline-block
+			li
+				display table-cell
+				text-align center
+				padding 0 30px
+				a
+					display block;
+					padding 10px 15px;
+					font-size 16px; tdn(); color #fff; 
+					white-space nowrap
+					&:hover
+						color #60b7e8; 
+			li.active
+				a
+					color #60b7e8; 
+	.user
+		display table-cell
+		vertical-align middle
+		.enter
+			a
+				display block; 
+				padding 10px 15px 10px 40px;
+				background url("../img/i-user-enter.png") 20px center no-repeat; 
+				border-radius 5px;
+				color #fff; tdn();
+				&:hover
+					background-color #388ebf;
+
+
+//	О ПРОЕКТЕ
+// ===============================================
+.about-box
+	text-align center; 
+	h2
+		margin-bottom 40px;
+		font-size 20px; color #828282;
+	.main-width
+		min-width 980px;  
+		width 980px;  
+	// -----------------------------------------------
+	.block-text
+		padding 40px 0 15px 0; 
+		p
+			margin-bottom 30px;
+	// -----------------------------------------------
+	.block-reviews
+		padding 40px 0; background #fff;
+		.slider		
+			.slide
+				width 650px; margin 0 auto;	
+				.prev
+					padding-bottom 10px; 
+					img
+						display inline-block; background #cccccc; border-radius 50%; border 3px solid #e8e8e8;
+				.name
+					font-size 16px; 
+				.post
+					padding-bottom 20px;
+					font-size 13px; color #60b7e8;
+				.text
+					position relative;
+			.owl-controls
+				position relative;
+			.owl-controls
+				position absolute; left 0px; top 120px; width 100%;
+			.owl-prev
+				position absolute; left 0px; top 0px; width 21px; height 22px;
+				background url("../img/slider-nav.png") no-repeat; z-index 5;
+				&:hover
+					background-position 0 -22px; 
+			.owl-next
+				position absolute; right 0px; top 0px; width 21px; height 22px;
+				background url("../img/slider-nav.png") -21px 0 no-repeat; z-index 5;
+				&:hover
+					background-position -21px -22px;
+		.action
+			padding-top 40px; 
+			a
+				display inline-block; 
+				padding 7px 15px; 
+				color #fff; tdn(); 
+				background linear-gradient(0deg, #c4c4c4 0%, #b8b8b8 100%);
+				border-radius 3px;
+				&:hover
+					opacity 0.8;
+	// -----------------------------------------------	
+	.block-contacts
+		padding 40px 0;
+		h2
+			margin-bottom 10px;
+		span.sep
+			display inline-block; margin-bottom 15px; 
+			font-size 14px; color #828282; 
+		ul
+			lino()
+			li
+				a
+					color #828282;
+			li.phone
+				padding-bottom 10px;
+				span
+					display inline-block; padding-left 15px;
+					background url("../img/i-phone.png") 0 center no-repeat; 
+			li.email
+				display inline-block; padding-left 25px;
+				background url("../img/i-email.png") 0 center no-repeat; 
+
+
+//	ИНСТРУКЦИЯ
+// ===============================================
+.instruction-block
+	overflow hidden; 
+	position relative; 
+	width 980px; margin 30px auto;
+	background #fff; border-radius 5px; 
+	h1
+		padding 50px 0px; margin 0; 
+		color #4d4d4d; font-size 20px; text-align center;
+	.item
+		position relative;
+		clearfix(); 
+		&:nth-child(odd)
+			background #f5f5f5; 
+		&:nth-child(even)
+			background #fff; 
+		.welcome
+			position relative;
+			padding 50px 100px 50px 30px;
+			cursor pointer; 
+			anim();
+			clearfix(); 
+			color #4d4d4d
+			&:after
+				content " "; position absolute; right 30px; top 50%; width 14px; height 14px; margin-top -7px;
+				background url("../img/i-plus.png") no-repeat; 
+			.num 
+				float left;
+				display table; 
+				margin-top 7px;
+				width 40px; height 40px; 
+				font-size 18px; color #fff;
+				background alpha(#4d4d4d,.8); 
+				border-radius 20px;
+				span
+					display table-cell; text-align center; vertical-align middle;
+			.text 
+				display table-cell; padding-left 30px;
+				font-size 18px; line-height 27px; 
+		.hidden-text
+			display none;
+			padding 50px 30px 50px 30px;
+			font-size 14px; line-height 25px;
+			clearfix(); 
+	.item.active
+		.welcome
+			background #60b7e8;
+			color #fff; 
+			&:after
+				right 27px;
+				margin-top -5px;
+				background url("../img/i-x.png") no-repeat; 
+		.num 
+			background #80c5ed;
+
+
+//	ОФРЕТА
+// ===============================================
+.offer-block
+	max-width 980px; full();  
+	margin 30px auto; padding 50px 30px;
+	background #fff;
+	border-radius 5px; 
+	h1
+		font-size 20px; color #828282; text-align center;
+	h2
+		font-size 18px; color #60b7e8; text-align center;
+	p
+		margin-bottom 25px; line-height 25px;
+	.blue
+		color #60b7e8;
+
+
+//	ОРГАНИЗАЦИЯ
+// ===============================================
+.organ-block
+	margin 30px auto; padding 0 30px;
+	.wrapperw
+		background #ececec; border-radius 5px;
+	.welcome
+		position relative; 
+		padding 40px;
+		color #fff; text-align center;
+		background url("../img/map-bg.jpg") no-repeat; cover();
+		border-radius 5px 5px 0 0;
+		.edit
+			position absolute; right 50px; top 50px; width 36px; height 36px;
+			background #51a8d9; border-radius 30px;
+			anim();
+			a
+				display block; width 36px; height 36px; 
+				background url("../img/i-edit.png") center center no-repeat;
+			&:hover
+				background #74b9e1; 				 
+		.bname
+			padding-bottom 10px;
+			h3
+				margin-bottom 0; color #fff;
+		.place
+			display inline-block;
+			padding-bottom 30px;
+			padding-left 20px;
+			background url("../img/i-map3.png") 0 3px no-repeat;
+			color #c3e3f5;  
+			strong
+				light(); color #fff; 
+		.btext
+			.item
+				display table-cell 
+				width 10%; padding 60px 25px 0 25px; full();
+				p
+					display table; width 100%; font-size 14px;
+				strong
+					display table-cell; height 40px;
+					font-size 16px; light(); vertical-align middle;
+				a
+					color #fff; tdn(); 
+					&:hover
+						text-decoration underline; 
+			.phone
+				background url("../img/pic-phone.png") center 0 no-repeat; 
+			.address
+				background url("../img/pic-map.png") center 0 no-repeat; 
+			.time
+				background url("../img/pic-time.png") center 0 no-repeat; 
+			.site
+				background url("../img/pic-site.png") center 0 no-repeat; 
+	.founded
+		padding 40px 0 25px 0; text-align center; font-size 20px; 
+		background #fff; 
+	.learn
+		padding 40px 30px 40px 30px; text-align center;
+		background #f5f5f5; 
+		.bname 
+			padding-bottom 30px; color #828282; font-size 16px;
+		.item
+			margin-bottom 10px;
+			padding 2px 10px; 
+			background #eeeeee url("../img/i-doc.png") 12px center no-repeat;
+			border-radius 15px; 
+			a
+				display block; font-size 14px; color #828282;
+				background url("../img/arrow-grey-r.png") right center no-repeat;
+	.addnew
+		padding 40px 0 30px 30px;
+		text-align center;
+		background #fff;
+		a
+			display inline-block;
+			margin 0; padding 15px 30px;
+			font-size 14px; color #fff; tdn();
+			border-radius  4px; box-shadow 0; background #60b7e8; border none;
+			&:hover
+				background #4ca8e1;
+	.topfilter
+		box-shadow none; padding 0 20px; border-radius 0 0 5px 5px; 
+		.search
+			input[type="submit"]
+				background #60b7e8;
+				&:hover
+					background #4ca8e1
+	.peoples-box 
+		.peoples-list
+			position relative;
+			width 100%;
+			clearfix();
+		.peoples-table-box
+			padding 0 40px
+
+
+//	СПИСОК ОРГАНИЗАЦИЙ
+// ===============================================
+.organ-list
+	margin 30px 0px 50px 0px;
+	.table-wrap
+		display table-cell 
+		overflow hidden; 
+		border-radius 4px;
+		table
+			width 100%;
+			td
+				text-align center;
+				vertical-align middle;
+			td:first-child
+				padding-left 20px;
+			td:last-child
+				padding-right 20px;
+			td.phone
+				white-space nowrap;
+			td.place
+				min-width 150px; 
+			td.moretd
+				min-width 150px; 
+			thead
+				tr
+					td
+						background #ffffff; padding 35px 10px;
+						color #828282; font-size 14px; font-weight 400;
+					td:first-child
+						border-radius 4px 0 0 0; 
+					td:last-child
+						border-radius 0 4px 0 0;
+					td.active
+						color #60b7e8;
+						&:after
+							display inline-block;
+							margin 0px 0 3px 10px;
+							content " "; 
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 4px 4px 0 4px;
+							border-color: #60b7e8 transparent transparent transparent;
+			tbody
+				tr
+					td
+						background #f5f5f5; padding 35px 10px;
+					td.phone
+						span
+							display inline-block; padding-left 15px; 
+							background url("../img/i-phone.png") 0 center no-repeat;
+					td.site
+						a
+							display inline-block; padding-left 22px; 
+							color #828282;
+							background url("../img/i-site.png") 0 center no-repeat;
+				tr:nth-child(even)
+					td
+						background #ffffff;
+			.map
+				a
+					display inline-block;
+					padding 5px 20px 5px 35px;
+					color: #818181; tdn();
+					text-align left; 
+					background #f0f0f0 url("../img/i-map.png") 15px center no-repeat;
+					border-radius 15px;
+					&:hover
+						background #fbfbfb url("../img/i-map.png") 15px center no-repeat;
+			.more
+				a
+					display inline-block;
+					margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+					color #fff; tdn(); 
+					background #60b7e8;
+	.sideinfo
+		display table-cell 
+		width 25%
+		min-width 200px; 
+		color #000; 
+		padding-left 50px;
+		color #828282; text-align center;
+		.bname
+			padding-bottom 20px; font-size 18px;
+		.bcontent
+			font-size 14px;	
+			p
+				margin-bottom 20px;
+			ul
+				lino()
+			li
+				margin 0
+				a
+					position relative;
+					display inline-block;
+					margin 0 5px 10px 5px; padding 5px 15px;
+					color #fff; tdn(); 
+					background #60b7e8; border-radius 20px;
+					&:hover
+						background-color #77c1eb;
+			li.active
+				a
+					background darken(#60b7e8, 30%); 
+					
+
+//	СПИСОК ОРГАНИЗАЦИЙ
+// ===============================================
+.organ-map
+	display flex; justify-content space-between; align-content flex-start;
+	position relative;
+	margin 30px 0px 50px 0px;
+	background #fff; 
+
+
+//	ФИЛЬТР
+// ===============================================
+.topfilter
+	background #fff;
+	box-shadow 0 10px 29px rgb(231, 231, 231);
+	.wrap
+		display table
+		width 100%
+	.filter
+		display table-cell 
+		vertical-align middle
+		width 90px
+		margin-right 10px; padding 10px 0;		
+		ul
+			padding-right 10px;
+			lino(); clearfix(); 
+			li
+				float left; 
+			li
+				padding 0 10px;
+				a
+					position relative; display inline-block; width 18px; height 18px;
+					color #828282; font-size 14px; tdn();
+					background url("../img/views.png") no-repeat;
+					transition none; 
+					&:hover
+						color #50a8d9;
+				&.full
+					a
+						background-position 0 -18px;
+						&:hover
+							background-position 0px 0px;
+					&.active
+						a
+							background-position 0px 0px;
+				&.list
+					a
+						background-position -18px -18px;
+						&:hover
+							background-position -18px 0px;
+					&.active
+						a
+							background-position -18px 0px;
+				&.map
+					a
+						background-position 0px -36px;
+						&:hover
+							background-position -18px -36px;
+					&.active
+						a
+							background-position -18px -36px;
+							
+	.search
+		display table-cell 
+		vertical-align middle
+		position relative; color #000;
+		padding 15px 0;
+		input[type="text"]
+			width 100%; full();  
+			color #a6a6a6; font-size 16px;
+			height 50px;
+			margin 0; padding 13px 50px;
+			background #f1f1f1 url("../img/i-search.png") 17px center no-repeat;
+			border-radius 6px; box-shadow 0; border none;
+			anim();
+			&:hover, &:focus
+				background #e6e6e6 url("../img/i-search.png") 17px center no-repeat;
+		input[type="submit"]
+			position absolute; right 0px; top 15px;
+			height 50px;
+			margin 0px; padding 12px 20px;
+			font-size 16px;
+			border-radius  0 4px 4px 0; box-shadow 0; background #4195cf; border none;
+			&:hover
+				background #51a6d7;
+		&:hover
+			input[type="text"]
+				background #e6e6e6 url("../img/i-search.png") 17px center no-repeat;
+	&-small .filter ul li.full a
+		background: url('../img/i-flag.png') 0 0 no-repeat
+		
+
+//	СПИСОК ПОЛЬЗОВАТЕЛЕЙ
+// ===============================================
+.peoples-box
+	margin 30px 0px 50px -20px;
+	.peoples-table-box
+		width 100%;
+		full() 
+		border-radius 4px;
+		padding 0 0 0 20px
+		table
+			width 100%;
+			td
+				text-align center;
+				vertical-align middle;
+			td:first-child
+				padding-left 20px;
+			td:last-child
+				padding-right 20px;
+			td.id
+				width 5%; text-align left; 
+			td.name
+				width 25%;
+			td.place
+				min-width 150px; 
+			td.moretd
+				min-width 150px; 
+			td.age
+				min-width 80px; 
+			thead
+				tr
+					td
+						background #ffffff; padding 35px 10px;
+						color #828282; font-size 14px; font-weight 400;
+					td:first-child
+						border-radius 4px 0 0 0; 
+					td:last-child
+						border-radius 0 4px 0 0;
+					td.active
+						color #60b7e8;
+						&:after
+							display inline-block;
+							margin 0px 0 3px 10px;
+							content " "; 
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 4px 4px 0 4px;
+							border-color: #60b7e8 transparent transparent transparent;
+			tbody
+				tr
+					td
+						background #f5f5f5; padding 35px 10px;
+					&:nth-child(even)
+						td
+							background #ffffff;
+
+			.sex
+				padding-left 20px;
+				&.m
+					color #60b7e8; 
+					background url("../img/sex-m.png") 0 3px no-repeat;
+				&.w
+					color #e6839b; 
+					background url("../img/sex-w.png") 0 2px no-repeat; 
+			.map
+				a
+					display inline-block;
+					padding 5px 20px 5px 35px;
+					color: #818181; tdn();
+					text-align left; 
+					background #f0f0f0 url("../img/i-map.png") 15px center no-repeat;
+					border-radius 15px;
+					&:hover
+						background #fbfbfb url("../img/i-map.png") 15px center no-repeat;
+			.more
+				position relative;
+				> a
+					position relative;
+					display inline-block;
+					margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+					color #fff; tdn(); 
+					background #60b7e8;
+					&:hover
+						background-color #77c1eb;
+					&.big
+						background #60b7e8 url("../img/points.png") center center no-repeat;
+						&:hover
+							background-color #77c1eb;
+						&.active
+							background-color #4da9e3; cursor pointer;
+							&:after
+								position absolute; left 9px; top -20px; 
+								content " "; 
+								width: 0;
+								height: 0;
+								border-style: solid;
+								border-width: 9px 9px 0 9px;
+								border-color: #378dbf transparent transparent transparent;
+				.menu-big
+					display none;
+					overflow hidden;
+					position absolute; width auto; left 45%; bottom 50px; 
+					margin 0 -35px; padding 0 40px;
+					background #378ebf; border-radius 5px;
+					ul
+						lino();
+						li
+							margin 0 -40px; full();
+							a
+								display block; padding 5px 10px; white-space nowrap;
+								color #fff; tdn();
+								&:hover
+									background #56a4d0; 
+
+	// -----------------------------------------------
+	.peoples-list
+		display table-cell 
+		vertical-align top
+		width 80%
+		padding-right 30px
+		.people
+			display table
+			width 50%
+			float left
+			padding 0 20px 30px 20px
+			full() 
+			&:nth-child(odd)
+				clear both
+			@media wmin
+				width 100%
+				padding-right 0
+				float none
+			.prev
+				display table-cell
+				width 150px
+				vertical-align top
+				position relative; padding 25px 20px;
+				background #f9f9f9 url("../img/shaddow.png") right 0 repeat-y; border-radius 10px 0 0 10px; 
+				.ins
+					.pic
+						position relative;
+						margin 0 auto;
+						padding-top 30px;
+						.avatar
+							overflow hidden;
+							position relative; width 90px; height 90px; margin 0 auto;
+							text-align center;
+							img
+								display inline-block; background #cccccc; border-radius 50%; border 3px solid #e8e8e8;
+							&.no-avatar
+								background url("../img/avatar-no.png") center bottom no-repeat;
+								img
+									border 0; background 0;
+						.fin
+							position absolute; left -25px; top 45%; white-space nowrap;
+							padding 10px 15px; border-radius 5px;
+							text-align center; color #fff;
+							background alpha(#191d20, .4);
+					.sex
+						position absolute; left 25px; top 25px; 
+						padding-left 20px;
+						&.m
+							color #60b7e8; 
+							background url("../img/sex-m.png") 0 3px no-repeat;
+						&.w
+							color #e6839b; 
+							background url("../img/sex-w.png") 0 2px no-repeat; 
+					.id
+						position absolute; right 25px; top 25px;
+						color #b7b7b7; font-size 12px;
+					.inform
+						padding-top 25px;
+						ul
+							li
+								lino();
+								margin-bottom 10px; padding 2px 0 2px 30px;
+								color #828282; font-size 13px;
+								clearfix(); 
+								&.hat
+									background url("../img/i-dress-h.png") 0 3px no-repeat;
+								&.jacket
+									background url("../img/i-dress-j.png") 0 3px no-repeat; 
+								&.jeans
+									background url("../img/i-dress-je.png") 0 2px no-repeat; 
+								&.shoes
+									background url("../img/i-dress-s.png") 0 7px no-repeat; 
+								.inform-n
+									float left; 
+								.inform-f
+									float right; padding-top 2px;
+									span
+										display block;
+										width: 14.375px; height: 14.375px;
+										border-radius 50%;
+									.circle-nocolor
+										width: 12.375px; height: 12.375px;									
+									span.blue2
+										background-color: #56AAD9;
+									span.blue3
+										background-color: #4497C6;
+									span.blue4
+										background-color: #257AAA;
+					.more
+						position relative; padding-top 15px;
+						> a
+							position relative;
+							display inline-block;
+							margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+							color #fff; tdn(); 
+							background #60b7e8;
+							&:hover
+								background-color #77c1eb;
+							&.big
+								background #60b7e8 url("../img/points.png") center center no-repeat;
+								&:hover
+									background-color #77c1eb;
+								&.active
+									cursor pointer; background-color #4da9e3;
+									&:after
+										position absolute; left 9px; top -20px; 
+										content " "; 
+										width: 0;
+										height: 0;
+										border-style: solid;
+										border-width: 9px 9px 0 9px;
+										border-color: #378dbf transparent transparent transparent;
+						.menu-big
+							display none;
+							overflow hidden;
+							position absolute; width 100%; left -5px; bottom 50px; 
+							margin 0 -35px; padding 0 40px;
+							background #378ebf; border-radius 5px;
+							ul
+								lino();
+								li
+									margin 0 -40px; full();
+									a
+										display block; padding 5px 10px;
+										color #fff; tdn();
+										&:hover
+											background #56a4d0; 
+			.info
+				display table-cell 
+				background #fff; border-radius 0 10px 10px 0;
+				full() 
+				.name
+					padding 25px 25px 40px 25px; 
+					font-size 18px; regular(); text-align center;
+				.specmain
+					padding 0 10px 20px 10px;
+					clearfix(); 
+					.item
+						width 33%; float left; padding 0 15px; full(); 
+						text-align center;
+						.graph
+							position relative; width 84px; height 69px; margin 0 auto -69px auto;
+							margin-bottom -69px;
+							background url("../img/graph0.png") center center no-repeat; 
+							&.graph1
+								background url("../img/graph1.png") center center no-repeat; 
+						.count
+							position relative; 
+							display inline-block;
+							margin-top 10px; 
+							padding 5px 10px;
+							background #60b7e8; border-radius 15px; 
+							font-size 12px; color #fff;
+						.desc 
+							height 40px; 
+							color: #B7B7B7; font-size 12px;
+							&.sm
+								font-size 10px;
+						.title
+							font-size 14px;	
+				.specmore
+					padding 20px 10px 20px 10px;
+					background #f6f6f6;
+					clearfix(); 
+					.item
+						width 33%; float left; padding 0 15px; full(); 
+						text-align center;
+						.title
+							font-size 12px; color: #B7B7B7;
+						.text
+							font-size 14px;
+				.address
+					padding 25px;
+					clearfix();
+					.map
+						float left; 
+						a
+							display block;
+							padding 5px 20px 5px 35px;
+							color: #818181; tdn();
+							background #f6f6f6 url("../img/i-map.png") 15px center no-repeat;
+							border-radius 15px;
+							&:hover
+								background #fbfbfb url("../img/i-map.png") 15px center no-repeat;
+					.phone
+						float right;
+						display block;
+						padding 5px 0px 5px 15px;
+						color: #818181;
+						background url("../img/i-phone.png") 0 center no-repeat;
+						border-radius 15px;
+
+	// - - - - - - - - - - - - //
+		
+	.side-filter
+		display table-cell
+		vertical-align top
+		min-width 320px; 
+		color #000; 
+		clearfix(); 
+		.side-ins
+			background #60b7e8; border-radius 10px;
+			overflow hidden
+		.box
+			padding 30px 0; color #fff; 
+			h3 
+				margin-bottom 25px;
+				color #fff; font-size 18px; light(); text-align center;
+			.content
+				padding 0 25px;
+				.line-name
+					text-align center; padding-bottom 10px;
+				.line-slider
+					position relative; height 3px; margin 25px 0 30px 0;
+					background #51a8d9; border-radius 3px;
+					.line-img
+						position absolute; left 50%; top -10px; transform translateX(-50%);
+				input, textarea
+					full(); width 100%;
+				::-webkit-input-placeholder
+					color alpha(#fff, .8);
+				input::-webkit-input-placeholder
+					color alpha(#fff, .8);
+				textarea::-webkit-input-placeholder
+					color alpha(#fff, .8);
+				:-moz-placeholder
+					color alpha(#fff, .8);
+					opacity 1;
+				::-moz-placeholder
+					color alpha(#fff, .8);
+					opacity 1;
+				:-ms-input-placeholder
+					color alpha(#fff, .8);
+				input, textarea
+					color alpha(#fff, .8) !important
+				.chkb-list
+					width 100%; padding-top 15px; text-align left;
+					.chkb-cell
+						display table-cell;
+						&:first-child
+							padding-right 15px;
+						&:last-child
+							padding-left 15px;
+						.chkb-line
+							padding-bottom 15px;
+
+			.action
+				padding 30px 25px 0 25px;
+				a
+					display block; padding 15px 20px; full(); 
+					border-radius 4px; background #4195cf;
+					color #fff; font-size 16px; tdn(); text-align center;
+					&:hover
+						background #51a6d7;
+		.boxmain
+			.sex
+				padding-top 20px; text-align center;
+		.boxdesc
+			background #378ebf;
+			.content
+				text-align center;
+				.line
+					display inline-block; padding-bottom 5px; clearfix();
+					span
+						float left; 
+					span.count
+						margin -0px 0 0 5px; padding 1px 7px 3px 7px; border-radius 15px;
+						font-size 12px;
+						background #3180ac;
+				.line-slider
+					margin 10px 0 30px 0; background #2c7aa7; 
+			textarea
+				background #2c7aa7; border-color #2c7aa7; 
+				&:hover
+					border-color #8cc9eb;
+		.boxfound
+			background #60b7e8; 
+			textarea
+				background #51a8d9;
+			.irs
+				.irs-line
+					background #51a8d9; 
+				.irs-diapason
+					background #3e91c5; 
+				.irs-from
+					background #3e91c5; 
+				.irs-to
+					background #3e91c5; 
+				.irs-single
+					background #3e91c5;
+		span.ask-pop
+			position relative;
+			display inline-block;
+			width 19px; height 19px; margin 0 0 -5px 5px;
+			background url("../img/i-ask.png") no-repeat; 
+			opacity 0.5;
+			cursor pointer;
+			anim-op();
+			&.active, &:hover
+				opacity 1;
+			&.bg-dark
+				background url("../img/i-ask2.png") no-repeat;
+			&.active
+				&:after
+					position absolute; left 0px; top 31px; 
+					content " "; 
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 9px 9px 9px;
+					border-color: transparent transparent #c1dff0 transparent;
+		.ask-pop-text
+			display none;
+			margin -5px 25px 25px 25px;
+			padding 15px;
+			color #51a8d9; font-size 14px; line-height 20px;
+			background #fff; border-radius 5px; 
+
+		.pad-bot
+			margin-bottom 30px;
+
+
+//	ОДИН ПОЛЬЗОВАТЕЛЬ
+// ===============================================
+.people-popup
+	width 1100px;
+.people-item
+	display flex; justify-content space-between;
+	max-width 1400px;
+	margin 30px auto 50px auto;
+	border-radius 10px;
+	overflow hidden;
+	.leftbl
+		display table-cell 
+		vertical-align top
+		padding 30px 40px; full();
+		background #fff;
+		.prevbl
+			position relative; padding 25px 20px;
+			height 450px;
+			.name
+				padding 0 25px;
+				font-size 22px; light(); text-align center;
+				span
+					display block; font-size 18px; 
+			.source
+				text-align center; 
+				color #60b7e8; font-size 13px; 
+				strong
+					semibold();
+			.pic
+				text-align center; padding-top 70px;
+				.avatar
+					img
+						display inline-block; background #cccccc; border-radius 50%; border 5px solid #cccccc;
+					.no-avatar
+						display inline-block; width 140px; height 115px;
+						background url("../img/avatar-no-big.png") no-repeat; 
+			.sex
+				position absolute; left 10px; top 25px; 
+				padding-left 20px;
+				color #469fd1; 
+				&.m
+					background url("../img/sex-m.png") 0 center no-repeat; 
+				&.w
+					background url("../img/sex-w.png") 0 center no-repeat; 
+			.askphoto
+				position absolute; right 10px; top 25px; 
+				> a
+					display inline-block; margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+					color #fff; tdn(); 
+					background #60b7e8;
+					&:hover
+						background-color #4da9e3; 
+					&.big
+						background #60b7e8 url("../img/points.png") center center no-repeat;
+						&:hover, &.active
+							background-color #4da9e3;
+						&.active
+							&:after
+								position absolute; left 9px; top 42px; 
+								content " "; 
+								width: 0;
+								height: 0;
+								border-style: solid;
+								border-width: 0 9px 9px 9px;
+								border-color: transparent transparent #378dbf transparent;
+				.menu-big
+					display none;
+					overflow hidden;
+					position absolute; width 110px; left -40px; top 50px; 
+					margin 0 -35px; padding 0 40px;
+					background #378ebf; border-radius 5px;
+					ul
+						lino();
+						li
+							margin 0 -40px; full();
+							a
+								display block; padding 5px 10px;
+								color #fff; tdn();
+								&:hover
+									background #56a4d0; 
+			.colors
+				position absolute; left 75px; top 160px; 
+				.item
+					float left; text-align center; padding 0 0 45px 0;
+					.text
+							padding-bottom 7px;
+							font-size 12px; color #a5a5a5;
+						.title
+							padding-top 7px;
+					.prev
+						position relative; display inline-block; width  55px; height 47px;
+						vertical-align middle; text-align center;
+						background url("../img/color-wrap.png") no-repeat; 
+						anim();
+						.color
+							position relative; display inline-block; margin-top 8px; width 25px; height 25px;
+							vertical-align middle;
+							border-radius 25px;
+							anim();
+							&.color1
+								background #42464c; 
+							&.color2
+								background #6b6d71; 
+							&.color3
+								background #bb6d3e; 
+							&.color4
+								background #99856f; 
+							&.color5
+								background #aaa154; 
+							&.color6
+								background #d1dde4; 
+							&.color8
+								background #2c77a2; 
+							&.color9
+								background #1fa2ec; 
+							&.color10
+								background #d1dde4; 
+							&.color11
+								background #5eac3b; 
+							&.color12
+								background #b3a555; 
+							&.color13
+								background #635750; 
+					.name 
+						padding-top 15px;
+				.item-2
+					margin-left 60px;
+			.spec
+				position absolute; right 75px; top 160px; 
+				.item
+					float right; 
+					padding-bottom 50px;
+					text-align center;
+					.graph
+						position relative; width 84px; height 69px; margin 0 auto -69px auto;
+						margin-bottom -69px;
+						background url("../img/graph0.png") center center no-repeat; 
+						&.graph1
+							background url("../img/graph1.png") center center no-repeat; 
+					.count
+						position relative; 
+						display inline-block;
+						margin-top 10px; 
+						padding 5px 10px;
+						background #60b7e8; border-radius 15px; 
+						font-size 12px; color #fff;
+					.desc 
+						height 40px; 
+						color: #B7B7B7; font-size 12px;
+						&.sm
+							font-size 10px;
+					.title
+						font-size 14px;
+				.item-2
+					margin-right 60px;
+			.viewbl
+				position absolute; left 44%; top 350px; width auto; padding-top 65px; text-align center; 
+				background url("../img/people-man-s-n.png") center 0 no-repeat;
+				.title
+					font-size 12px; color: #B7B7B7;
+				.text
+					font-size 14px;
+		.inform
+			margin 0 -40px; padding 20px 20px 10px 20px; background #f5f5f5; 
+			ul
+				display table; width 100%;
+				li
+					display table-cell;
+					lino();
+					margin-bottom 10px; padding 2px 0 2px 30px;
+					color #828282; font-size 13px;
+					clearfix(); 
+					&.hat
+						background url("../img/i-dress-h.png") 0 3px no-repeat;
+					&.jacket
+						background url("../img/i-dress-j.png") 0 3px no-repeat; 
+					&.jeans
+						background url("../img/i-dress-je.png") 0 2px no-repeat; 
+					&.shoes
+						background url("../img/i-dress-s.png") 0 7px no-repeat; 
+					.inform-n
+						float left; 
+					.inform-f
+						float left; padding-top 2px; padding-left 20px;
+						span
+							display block;
+							width: 14.375px; height: 14.375px;
+							background-color: #5FB7E7; border-radius 50%;
+						span.blue2
+							background-color: #56AAD9;
+						span.blue3
+							background-color: #4497C6;
+						span.blue4
+							background-color: #257AAA;
+		.prim
+			background #ececec;
+			margin 0 -40px;
+			padding 40px 40px;
+			color #828282; font-size 14px; line-height 23px;
+			.prim-list
+				margin-top -10px; margin-bottom 15px; text-align center;
+				.prim-i
+					display inline-block; margin 0 5px; padding 5px 15px;
+					color #fff; 
+					background #60b7e8; border-radius 25px;
+		.box
+			padding-bottom 50px;
+			.bname
+				padding-bottom 30px;
+				text-align center;
+				h3
+					margin-bottom 0;
+			.btext
+				text-align center;
+				h4
+					margin-bottom 15px;
+					font-size 16px; color #469fd1;
+		.boxmap
+			margin 0 -40px; padding 40px;
+			color #fff; text-align center;
+			background url("../img/map-bg.jpg") no-repeat; cover();
+			.bname
+				padding-bottom 10px;
+				h3
+					margin-bottom 0; color #fff;
+			.place
+				display inline-block;
+				padding-bottom 30px;
+				padding-left 20px;
+				background url("../img/i-map3.png") 0 3px no-repeat;
+				color #c3e3f5;  
+				strong
+					light(); color #fff; 
+			.btext
+				.item
+					display table-cell 
+					width 33%; padding 60px 25px 0 25px; full();
+					p
+						display table; width 100%;
+					strong
+						display table-cell; height 40px;
+						font-size 16px; regular(); vertical-align middle;
+				.item1
+					background url("../img/dress.png") center 0 no-repeat; 
+				.item2
+					background url("../img/spec.png") center 0 no-repeat; 
+				.item3
+					background url("../img/search.png") center 0 no-repeat; 
+		.boxmore
+			background #f6f6f6; 
+			margin 0 -40px; padding 40px;
+			.bname
+				padding-bottom 30px;
+				text-align center;
+				h3
+					margin-bottom 0;
+			.btext
+				text-align center;
+				h4
+					margin-bottom 15px;
+					font-size 16px; color #469fd1;
+		.boxapplicant
+			padding 40px 40px 0 40px;
+			p
+				margin-bottom 10px;
+	.rightbl
+		display table-cell 
+		width 20%
+		vertical-align top
+		overflow hidden;
+		min-width 320px; 
+		color #000; 
+		background #f9f9f9 url("../img/shaddow2.png") 0 0 repeat-y;
+
+		.share
+			padding 30px;
+			.bname
+				padding-left 20px;
+				regular(); 
+				background url("../img/i-share.png") 0 center no-repeat;
+			.bcontent
+				padding-top 10px;
+				padding-left 10px; 
+				ul
+					lino(); clearfix();
+					li
+						float left; padding 0 3%;
+						a
+							display block; width 26px; height 26px;
+							anim();
+					li.fb
+						a
+							background url("../img/s-f.png") no-repeat;
+							&:hover, &:after
+								content " "; 
+								background url("../img/s-f-a.png") no-repeat;
+					li.tw
+						a
+							background url("../img/s-t.png") no-repeat;
+							&:hover, &:after
+								content " "; 
+								background url("../img/s-t-a.png") no-repeat;
+					li.g
+						a
+							background url("../img/s-g.png") no-repeat;
+							&:hover, &:after
+								content " "; 
+								background url("../img/s-g-a.png") no-repeat;
+					li.p
+						a
+							background url("../img/s-p.png") no-repeat;
+							&:hover, &:after
+								content " "; 
+								background url("../img/s-p-a.png") no-repeat;
+					li.vk
+						a
+							background url("../img/s-vk.png") no-repeat;
+							&:hover, &:after
+								content " "; 
+								background url("../img/s-vk-a.png") no-repeat;
+					li.o
+						a
+							background url("../img/s-o.png") no-repeat;
+							&:hover, &:after
+								content " "; 
+								background url("../img/s-o-a.png") no-repeat;
+		.nav
+			padding 30px;
+			background #F5F5F5; 
+			clearfix(); 
+			.nav-btns
+				float left; 
+				width 68px; height 27px;
+				background url("../img/slider-grey-nav-bg.png") no-repeat;
+				cursor pointer;
+				a
+					opacity .7; 
+					&:hover
+						opacity 1; 
+				.left
+					display table-cell;
+					width 40px; text-align center;
+					a
+						display inline-block; width 22px; height 20px;
+						background url("../img/arrow-b-right.png") center center no-repeat; 
+						transform rotate(180deg); 
+				.right
+					display table-cell; width 40px; text-align center; padding-top 2px;
+					a
+						display inline-block; width 22px; height 20px;
+						background url("../img/arrow-b-right.png") center center no-repeat; 
+			.nav-close
+				float right; 
+				width 26px; height 26px;
+				background url("../img/people-close.png") no-repeat;
+				cursor pointer;
+				anim();
+				&:hover
+					transform rotate(180deg); 
+		.found
+			background #ebebeb; 
+			padding 30px 30px 20px 30px;
+			.date
+				padding-bottom 10px;
+				.bname
+					regular();
+					padding-left 20px;
+					background url("../img/i-cal.png") 0 center no-repeat; 
+				.bcontent
+					clearfix();
+					display table;
+					padding-left 15px;
+					.item
+						display table-cell; vertical-align top; padding 0 5px;
+						color #969696; 
+						.num
+							display table-cell; vertical-align top;
+							font-size 36px; color: #5FB7E7;
+						.day
+							display table-cell; padding-left 5px; vertical-align top;
+							.month
+								padding-top 10px; font-size 16px; line-height 17px;
+							.year
+								font-size 10px;
+					.item.sep
+						text-align center; vertical-align middle; padding-bottom 10px;
+			.place
+				strong
+					semibold();
+					color #5a5a5a;  
+				.bname
+					color #969696; regular();
+					background url("../img/bg-grey.png") 0 center repeat-x; 
+					.bg
+						display inline-block;
+						padding-left 20px;
+						padding-right 10px;
+						background #ebebeb url("../img/i-map2.png") 0 center no-repeat; 
+				.bcontent
+					padding-top 10px;
+					padding-left 20px;
+					p
+						margin-bottom 10px;
+						color #969696;
+					a.map
+						display inline-block; padding 5px 15px;
+						background #b7b7b7; 
+						border-radius 15px; 
+						color #fff; tdn();
+						&:hover
+							background #a7a7a7; 
+					a.site
+						color #969696; tdn();
+						&:hover
+							text-decoration underline;
+							
+		.archive
+			padding 30px;
+			.bname
+				margin-bottom 10px;
+				regular();
+				padding-left 20px;
+				background url("../img/i-archive.png") 0 center no-repeat; 
+			.bcontent
+				padding-top 10px;
+				padding-left 20px;
+				.item
+					position relative; padding-bottom 10px;
+					a
+						color #5a5a5a; semibold();
+						tdn();
+						&:hover
+							text-decoration underline; 
+					&:after
+						content " "; 
+						position absolute; left -20px; top 0px; 
+						width 4px; height 100%;
+						background #e1e1e1;
+					&:before						
+						content " "; z-index 5;
+						position absolute; left -23px; top 5px; 
+						width 10px; height 10px;
+						background url("../img/i-circle.png") no-repeat; 
+				.item:first-child
+					&:after
+						height 100%; top 10px;
+				.item:last-child
+					padding-bottom 0;
+						&:after
+							height 10px;
+
+
+// ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ
+// ===============================================
+.people-add
+	max-width 1400px; margin 30px auto; border-radius 10px; overflow hidden;
+	.bname
+		padding 20px 0;
+		text-align center; 
+		background #e5e5e5;
+		h2
+			margin-bottom 0;
+	span.ask-pop
+		position relative;
+		display inline-block;
+		width 19px; height 19px; margin 0 0 -5px 5px;
+		background url("../img/i-ask3.png") no-repeat; 
+		opacity 0.5;
+		cursor pointer;
+		anim-op();
+		&.active, &:hover
+			opacity 1;
+		&.active
+			&:after
+				position absolute; left 0px; top 31px; 
+				content " "; 
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 9px 9px 9px;
+				border-color: transparent transparent #fff transparent;
+	.ask-pop-text
+		display none;
+		width 50%;
+		margin 20px auto 0 auto;
+		padding 15px;
+		color #828282; font-size 14px; line-height 20px;
+		background #fff; border-radius 5px; 
+
+	.bbox
+		padding 40px;
+		background #fff;
+		.title
+			padding-bottom 40px; text-align center;
+			h3
+				margin-bottom 0;
+		.rowid
+			padding-bottom 30px;
+			display block;
+			text-align center;
+			span
+				display inline-block; padding 5px 15px; margin-right 15px; 
+				font-size 16px; color #fff; 
+				background-color: #5FB7E7; border-radius 15px;
+			label
+				color #828282; 
+		.line3
+			display table 
+			width 100%
+			padding 0 5% 15px 5%
+			full() 
+			.cell
+				display table-cell
+				width 25%; padding 0 15px; full();
+				&:first-child
+					padding-left 0;
+				&:last-child
+					padding-right 0;
+			.center
+				text-align center;
+			input[type="text"], textarea
+				width 100%; full(); 
+			a.add
+				display block; width 100%; full();
+				padding 15px 15px;
+				margin-bottom 10px;
+				tdn();
+				border 1px dashed #e1e1e1; border-radius 5px;
+				&:hover
+					color #56b0e6; border-color #56b0e6;
+			&.spad
+				padding-bottom 10px;
+		.line1
+			display table
+			padding 30px 4% 15px 4%;
+			width 100%
+			full() 
+			.cell
+				display table-cell 
+				width 50%; padding 0 15px; full();
+				textarea
+					width 100%; full();
+		.line4
+			margin 0 auto
+			padding 0 15% 15px 15%;
+			full()
+			.cell
+				display table-cell 
+				width 10%; padding 0 15px; full();
+				&:first-child
+					padding-left 0;
+				&:last-child
+					padding-right 0;
+			.center
+				text-align center;
+			input[type="text"], textarea
+				width 100%; full(); 
+			a.add
+				display block; width 100%; full();
+				padding 15px 15px;
+				margin-bottom 10px;
+				tdn();
+				border 1px dashed #e1e1e1; border-radius 5px;
+				&:hover
+					color #56b0e6; border-color #56b0e6;
+			&.spad
+				padding-bottom 10px;
+		.line2
+			text-align center
+			padding-bottom 30px;
+			input[type="text"], textarea
+				width 25%; margin 0 10px;
+			a.add
+				display block; width 25%; full();
+				padding 15px 15px;
+				margin 0 10px 0px 10px; 
+				tdn();
+				border 1px dashed #e1e1e1; border-radius 5px;
+				&:hover
+					color #56b0e6; border-color #56b0e6;
+			&.spad
+				padding-bottom 20px;
+		
+		.range
+			padding-bottom 10px;
+			width 380px; margin 0 auto; full(); text-align center;
+			.title
+				display inline-block; padding-bottom 10px; clearfix();
+
+		// - - - - - - - - - - - - //
+			
+		.ranges
+			display table
+			padding-bottom 10px;
+			margin 0 auto
+			.item
+				display table-cell
+				width 380px; padding 0 40px; full(); text-align center;
+				.title
+					display inline-block; padding-bottom 5px; clearfix();
+					span
+						float left; 
+					span.count
+						margin -0px 0 0 5px; padding 1px 7px 3px 7px; border-radius 15px;
+						font-size 12px; color #b7b7b7; 
+						background #f1f1f1;
+		
+		// - - - - - - - - - - - - //
+		.chkb-list
+			padding 15px 0 35px 0; text-align center;
+			strong
+				display inline-block;
+				line-height 22px; 
+				font-weight 400; 
+			.chkb-cell
+				&:first-child
+					padding-right 25px;
+				&:last-child
+					padding-left 25px;
+				.chkb-line
+					display inline-block; margin 0 20px;
+					label
+						color #4E5255; 
+		// - - - - - - - - - - - - //
+			
+		/*.physique
+			padding-bottom 50px;
+			.content
+				display flex; justify-content space-between; justify-content center;
+				.item
+					width 170px; text-align center;
+					anim-op();
+					&:hover
+						opacity 0.7;
+					a
+						tdn();
+					.prev
+						position relative;
+						width 102px; height 257px; margin 0 auto;
+						&.n
+							background url("../img/people-man-n.png") center center no-repeat; 
+						&.t
+							background url("../img/people-man-t.png") center center no-repeat; 
+						&.b
+							background url("../img/people-man-b.png") center center no-repeat; 
+						&.g
+							background url("../img/people-girl-n.png") center center no-repeat;
+					.name 
+						padding-top 25px;
+				.item.active
+					.name
+						color #60b7e8; */
+		
+		// - - - - - - - - - - - - //
+		
+		/*.colorbox
+			padding-bottom 50px;
+			.content
+				display flex; justify-content space-between; justify-content center;
+				.item
+					text-align center; padding 0 20px;
+					a
+						tdn();
+						&:hover
+							.prev
+								border-color #8fccef; 
+							.color
+								width 35px; height 35px;
+							.name
+								color #8fccef; 
+					.prev
+						position relative; display table-cell; width 60px; height 60px;
+						vertical-align middle; text-align center;
+						border 2px solid #e7e7e7; border-radius 30px;
+						anim();
+						.color
+							position relative; display inline-block; width 25px; height 25px;
+							vertical-align middle;
+							border-radius 25px;
+							anim();
+							&.color1
+								background #42464c; 
+							&.color2
+								background #6b6d71; 
+							&.color3
+								background #bb6d3e; 
+							&.color4
+								background #99856f; 
+							&.color5
+								background #aaa154; 
+							&.color6
+								background #d1dde4; 
+							&.color7
+								background none;
+								border 2px solid #e7e7e7;
+							&.color8
+								background #2c77a2; 
+							&.color9
+								background #1fa2ec; 
+							&.color10
+								background #d1dde4; 
+							&.color11
+								background #5eac3b; 
+							&.color12
+								background #b3a555; 
+							&.color13
+								background #635750; 
+					.name 
+						padding-top 15px;
+						anim();
+				.item.active
+					.prev
+						border-color #8fccef; 
+					.name
+						color #60b7e8; */
+
+		// - - - - - - - - - - - - //
+		
+		.signs
+			padding 0 18%;
+			textarea
+				width 100%;
+
+		// - - - - - - - - - - - - //
+			
+		.avatar
+			width 210px; margin 0 auto; text-align center;
+			.prev
+				display inline-block;
+				width auto; margin 0 auto; padding-bottom 15px;
+				img
+					display block; background #fff; border-radius 50%; border 5px solid #ececec;
+					anim-op();
+					&:hover
+						opacity 0.7;
+			.upload
+				a
+					display inline-block;
+					margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+					color #fff; tdn(); 
+					background #60b7e8;
+					&:hover
+						background-color #4da9e3; 
+					&.big
+						background #60b7e8 url("../img/points.png") center center no-repeat;
+						&:hover
+							background-color #4da9e3; 
+		
+		// - - - - - - - - - - - - //
+		
+		a
+			color #828282; 
+		input[type="text"], textarea
+			full();
+			color #828282; 
+			background #f1f1f1; border 2px solid #f1f1f1;
+			&:hover, &:focus
+				background #f1f1f1; border 2px solid #d9d9d9;
+		
+		// - - - - - - - - - - - - //
+		
+		.irs
+			.irs-line
+				background #e3e3e2; 
+			.irs-diapason
+				background #5eb6e8; 
+			.irs-from
+				background #5eb6e8; 
+			.irs-to
+				background #5eb6e8; 
+			.irs-single
+				background #5eb6e8; 
+		
+		// - - - - - - - - - - - - //
+			
+		.sex
+			text-align center;
+			input[type="radio"] + label 
+				color #828282;
+			input[type="radio"] + label::before
+				color #828282;
+				background:url("../img/radio2.png") no-repeat;
+			input[type="radio"] + label:hover::before
+				background-position -20px 0px;
+			input[type="radio"]:checked + label::before 
+				background-position -40px 0px;
+		.comebak
+			text-align center; padding 15px 0 30px 0;
+			strong
+				font-weight 400;
+				display inline-block; margin-right 15px;
+			input[type="radio"] + label 
+				color #828282;
+			input[type="radio"] + label::before
+				color #828282;
+				background:url("../img/radio2.png") no-repeat;
+			input[type="radio"] + label:hover::before
+				background-position -20px 0px;
+			input[type="radio"]:checked + label::before 
+				background-position -40px 0px;
+	
+	// - - - - - - - - - - - - //
+		
+	.action
+		text-align center; border-radius 0 0 10px 10px;
+		padding 50px 50px;
+		background #60b7e8;
+		a
+			display inline-block; margin 0 30px; padding 15px 20px; full(); 
+			color #fff; font-size 16px; tdn(); text-align center; regular();
+		a.cancel:hover
+			text-decoration underline; 
+		a.save
+			padding 15px 80px;
+			border-radius 4px; background #4195cf;
+			&:hover
+				background #51a6d7;
+
+
+//	ОКОШКИ
+// ===============================================
+.leave-review-pop
+	position relative; 
+	width 680px; margin 0 auto; padding 35px 40px;
+	text-align center;
+	background #60b7e8; 
+	border-radius 7px;
+	.close
+		a
+			position absolute; right 20px; top 20px; 
+			display block; width 11px; height 11px; 
+			background url("../img/i-close.png") no-repeat; 
+			&:hover
+				transform rotate(180deg); 
+				opacity .7; 
+	.bname
+		h3
+			position relative; 
+			font-size 18px; color #fff;
+	.bcontent
+		::-webkit-input-placeholder
+			color alpha(#fff, .8);
+		input::-webkit-input-placeholder
+			color alpha(#fff, .8);
+		input
+			display inline-block; width 48%; full();
+			margin 0 5px 10px 5px;
+			color #fff;
+		textarea
+			position relative; width 98%; full(); 
+	.action
+		position relative; padding-top 30px;
+		a
+			display inline-block;
+			width 315px; padding 15px 25px; full(); 
+			color #fff; font-size 14px; regular(); tdn(); 
+			border-radius 4px; box-shadow 0;
+			background #4195cf; border none;
+			background linear-gradient(0deg, #4195cf 0%, #51a6d7 100%)
+			anim-all();
+			&:hover
+				background #51a6d7;
+				background linear-gradient(180deg, #51a6d7 0%, #54a0d4 100%)	
+// -----------------------------------------------
+.popup-small
+	position relative; 
+	width 390px; margin 0 auto; padding 35px 40px; full(); 
+	text-align center;
+	background #60b7e8; 
+	border-radius 7px;
+	.close
+		a
+			position absolute; right 20px; top 20px; 
+			display block; width 11px; height 11px; 
+			background url("../img/i-close.png") no-repeat; 
+			&:hover
+				transform rotate(180deg); 
+				opacity .7; 
+	.bname
+		h3
+			position relative; 
+			font-size 18px; color #fff;
+	.bcontent
+		input
+			display inline-block; width 100%; full();
+			margin 0 0 10px 0;
+		::-webkit-input-placeholder
+			color alpha(#fff, .8);
+		input::-webkit-input-placeholder
+			color alpha(#fff, .8);
+	.action
+		position relative; padding-top 30px;
+		a
+			display inline-block;
+			width 100%; padding 20px 25px; full(); 
+			color #fff; font-size 14px; regular(); tdn(); 
+			border-radius 4px; box-shadow 0;
+			background #4195cf; border none;
+			background linear-gradient(0deg, #4195cf 0%, #51a6d7 100%)
+			anim-all();
+			&:hover
+				background #51a6d7;
+				background linear-gradient(180deg, #51a6d7 0%, #54a0d4 100%);
+	.action.nopad
+		padding 0;
+	.ext
+		padding-top 30px;
+		a
+			color #fff; font-size 14px; regular(); 
+// -----------------------------------------------
+.popup-med
+	position relative; 
+	width 690px; margin 0 auto; padding 45px 40px; full(); 
+	text-align center;
+	background #60b7e8; 
+	border-radius 7px;
+	.close
+		a
+			position absolute; right 20px; top 20px; 
+			display block; width 11px; height 11px; 
+			background url("../img/i-close.png") no-repeat; 
+			&:hover
+				transform rotate(180deg); 
+				opacity .7; 
+	.bname
+		h3
+			position relative; 
+			font-size 18px; color #fff;
+	.bdesc
+		padding-bottom 30px;
+		font-size 18px; color #fff; line-height 25px;
+		&.small
+			font-size 14px; line-height 24px;
+	.items
+		clearfix(); 
+		.item
+			float left; width 33%; padding 60px 10px 0 10px; full(); 
+			color #fff; font-size 14px; line-height 22px;
+			.item-name
+				height 35px;
+				font-size 16px;
+			.item-more
+				padding-top 20px; 
+				a
+					display inline-block;
+					width auto; padding 5px 10px; full(); 
+					color #fff; font-size 14px; regular(); tdn(); 
+					border-radius 4px; box-shadow 0;
+					background #4195cf; border none;
+					background linear-gradient(0deg, #4195cf 0%, #51a6d7 100%)
+					anim-all();
+					&:hover
+						background #51a6d7;
+						background linear-gradient(180deg, #51a6d7 0%, #54a0d4 100%);
+		.item.mfc
+			background url("../img/pic-nfc.png") center 0 no-repeat; 
+		.item.phone
+			background url("../img/pic-phone.png") center 0 no-repeat; 
+		.item.note
+			background url("../img/pic-note.png") center 0 no-repeat; 
+	.bcontent
+		width 290px; margin 0 auto;
+		input
+			display inline-block; width 100%; full();
+			margin 0 0 10px 0;
+		::-webkit-input-placeholder
+			color alpha(#fff, .8);
+		input::-webkit-input-placeholder
+			color alpha(#fff, .8);
+	.lines
+		.line
+			clearfix(); 
+			padding-bottom 10px;
+			input
+				margin 0; width 95%; full();
+			.fl-left
+				float left; width 50%; full();
+			.fl-right
+				float right; width 50%; full();  
+	.agree
+		padding 30px 0;
+	.action
+		position relative;
+		width 290px; margin 0 auto;
+		a
+			display inline-block;
+			width 100%; padding 20px 25px; full(); 
+			color #fff; font-size 14px; regular(); tdn(); white-space nowrap;
+			border-radius 4px; box-shadow 0;
+			background #4195cf; border none;
+			background linear-gradient(0deg, #4195cf 0%, #51a6d7 100%)
+			anim-all();
+			&:hover
+				background #51a6d7;
+				background linear-gradient(180deg, #51a6d7 0%, #54a0d4 100%);
+		a.mar
+			margin 0 10px; 
+		a.shot
+			width auto; padding 20px 40px;
+.remodal
+	input
+		color alpha(#fff, .8) !important;
+
+
+// ПОДВАЛ
+// ===============================================
+.footer-fix
+	position relative;
+	height 150px;
+footer
+	position absolute; left 0px; bottom 0px; width 100%;
+	display block;
+	background #4d4d4d; 
+	a
+		color #fff;
+	.ins
+		padding 25px 0; color #fff; text-align center;
+		clearfix(); 
+		.gov
+			float left; padding-top 15px;
+			a
+				display block; 
+				width 154px; height 48px; 
+				background url("../img/gov.png") no-repeat;
+				anim-op();
+				&:hover
+					opacity 0.7; 
+		.contacts
+			float right; text-align right;
+			padding-top 16px
+			p
+				margin-bottom 5px;
+			.copy
+				font-size 13px; padding-top 5px;
+
+
+//	СЛАЙДЕР ЗНАЧЕНИЙ
+// ===============================================
+.irs
+	position relativ; margin-top 10px; height 50px; color #fff; font-size 14px;
+	.irs-line
+		top 5px; background #2c7aa7; height 3px; border-radius 3px; 
+	.irs-diapason
+		top 2px; background #5ab2e6; height 6px; z-index 2;
+	.irs-slider 
+		top -10px; width 30px; height 25px; background none; border-radius 25px; cursor pointer; z-index 6;
+	.irs-from
+		z-index 5;
+		width 25px; top -10px; 
+		margin-left -15px; padding 5px 10px; 
+		font-size 14px; text-align center;
+		background #5ab2e6; border-radius 25px; 
+	.irs-to
+		z-index 5;
+		width 25px; top -10px; 
+		margin-left 20px; padding 5px 10px; 
+		font-size 14px; text-align center;
+		background #5ab2e6; border-radius 25px; 
+	.irs-single
+		background #5ab2e6; z-index 5; padding 5px 20px; top -10px; font-size 14px; border-radius 3px; border-radius 25px; 
+.range-date
+	.irs-slider 
+		width 80px;
+	.irs-from
+		width 60px; margin-left -40px;
+	.irs-to
+		width 60px; margin-left 40px;
+	.irs-single
+		width 150px; padding 5px 10px; text-align center;
+
+
+//	КАРТА
+// ==============================================
+.map-wrapper
+	width: 100%
+	height: 100%
+
+.icon-baloon-small
+	display: inline-block
+	position: relative
+	top: 3px
+	height: 15px
+	width: 9px
+	margin-right: 5px
+	background: url('../img/i-map.png') 0 0 no-repeat
+.icon-phone
+	display: inline-block
+	position: relative
+	top: 1px
+	width: 8px
+	height: 12px
+	margin-right: 5px
+	background: url('../img/i-phone.png') 0 0 no-repeat
+.icon-web
+	display: inline-block
+	position: relative
+	top: 3px
+	width: 14px
+	height: 14px
+	margin-right: 5px
+	background: url('../img/i-site.png') 0 0 no-repeat		
+.info-window
+	border: 1px solid #fefefe;
+	&-control
+		> div
+			width: 100% !important
+	&-header
+		text-align: center
+		padding: 25px 10px 25px 25px
+		h2
+			display: inline-block
+			width: 80%
+			margin: 0
+			color: #828282
+			text-align: center
+			
+	&-body
+		// width: 100%
+		margin: auto
+		padding: 22px 0 10px
+		font-size: 14px
+		text-align: center
+		background-color: #f6f6f6
+		font-weight: 300
+		
+	&-footer
+		height: 116px
+		font-size: 14px
+		background: url('../img/info-window-left-pic.png') 0 bottom no-repeat, url('../img/info-window-right-pic.png') 100% bottom no-repeat
+		p
+			margin: 0
+			padding: 22px 0 0
+			text-align: center;
+			
+.button
+	display: inline-block;
+	margin: 0 3px;
+	padding: 5px 15px;
+	color: #fff;
+	text-decoration: none;
+	background: #60b7e8;		
+	border-radius: 3px;
+	&:hover
+		background-color: #77c1eb;
+		text-decoration: none
+		
+
+//	ЦВЕТА
+// ==============================================
+.circle-color1
+	background #42464c; 
+.circle-color2
+	background #6b6d71; 
+.circle-color3
+	background #bb6d3e; 
+.circle-color4
+	background #99856f; 
+.circle-color5
+	background #aaa154; 
+.circle-color6
+	background #d1dde4; 
+.circle-nocolor
+	background none;
+	border 2px solid #e7e7e7;
+.circle-color8
+	background #2c77a2; 
+.circle-color9
+	background #1fa2ec; 
+.circle-color10
+	background #d1dde4; 
+.circle-color11
+	background #5eac3b; 
+.circle-color12
+	background #b3a555; 
+.circle-color13
+	background #635750; 
