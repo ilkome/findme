@@ -969,6 +969,9 @@ header .user .enter a:hover {
 .organ-block .topfilter .search input[type="submit"]:hover {
   background: #4ca8e1;
 }
+.organ-block .peoples-box {
+  padding: 0 20px;
+}
 .organ-block .peoples-box .peoples-list {
   position: relative;
   width: 100%;
@@ -978,9 +981,6 @@ header .user .enter a:hover {
   content: "";
   display: table;
   clear: both;
-}
-.organ-block .peoples-box .peoples-table-box {
-  padding: 0 40px;
 }
 .organ-list {
   margin: 30px 0px 50px 0px;
@@ -1094,7 +1094,7 @@ header .user .enter a:hover {
   text-decoration: none;
   background: #60b7e8;
 }
-.organ-list .sideinfo {
+.organ-list .sidebox {
   display: table-cell;
   width: 25%;
   min-width: 200px;
@@ -1103,28 +1103,31 @@ header .user .enter a:hover {
   color: #828282;
   text-align: center;
 }
-.organ-list .sideinfo .bname {
+.organ-list .side-sort {
+  padding-bottom: 30px;
+}
+.organ-list .side-sort .bname {
   padding-bottom: 20px;
   font-size: 18px;
 }
-.organ-list .sideinfo .bcontent {
+.organ-list .side-sort .bcontent {
   font-size: 14px;
 }
-.organ-list .sideinfo .bcontent p {
+.organ-list .side-sort .bcontent p {
   margin-bottom: 20px;
 }
-.organ-list .sideinfo .bcontent ul {
+.organ-list .side-sort .bcontent ul {
   margin: 0;
   list-style: none;
 }
-.organ-list .sideinfo .bcontent ul li {
+.organ-list .side-sort .bcontent ul li {
   margin: 0;
   list-style: none;
 }
-.organ-list .sideinfo .bcontent li {
+.organ-list .side-sort .bcontent li {
   margin: 0;
 }
-.organ-list .sideinfo .bcontent li a {
+.organ-list .side-sort .bcontent li a {
   position: relative;
   display: inline-block;
   margin: 0 5px 10px 5px;
@@ -1134,10 +1137,10 @@ header .user .enter a:hover {
   background: #60b7e8;
   border-radius: 20px;
 }
-.organ-list .sideinfo .bcontent li a:hover {
+.organ-list .side-sort .bcontent li a:hover {
   background-color: #77c1eb;
 }
-.organ-list .sideinfo .bcontent li.active a {
+.organ-list .side-sort .bcontent li.active a {
   background: #1d8bc9;
 }
 .organ-map {
@@ -1286,10 +1289,11 @@ header .user .enter a:hover {
   margin: 30px 0px 50px -20px;
 }
 .peoples-box .peoples-table-box {
-  width: 100%;
-  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: top;
+  width: 80%;
   border-radius: 4px;
-  padding: 0 0 0 20px;
+  padding: 0 30px 0 20px;
 }
 .peoples-box .peoples-table-box table {
   width: 100%;
@@ -1784,49 +1788,49 @@ header .user .enter a:hover {
   background: url("../img/i-phone.png") 0 center no-repeat;
   border-radius: 15px;
 }
-.peoples-box .side-filter {
+.side-filter {
   display: table-cell;
   vertical-align: top;
   min-width: 320px;
   color: #000;
 }
-.peoples-box .side-filter:before,
-.peoples-box .side-filter:after {
+.side-filter:before,
+.side-filter:after {
   content: "";
   display: table;
   clear: both;
 }
-.peoples-box .side-filter .side-ins {
+.side-filter .side-ins {
   background: #60b7e8;
   border-radius: 10px;
   overflow: hidden;
 }
-.peoples-box .side-filter .box {
+.side-filter .box {
   padding: 30px 0;
   color: #fff;
 }
-.peoples-box .side-filter .box h3 {
+.side-filter .box h3 {
   margin-bottom: 25px;
   color: #fff;
   font-size: 18px;
   font-weight: 300;
   text-align: center;
 }
-.peoples-box .side-filter .box .content {
+.side-filter .box .content {
   padding: 0 25px;
 }
-.peoples-box .side-filter .box .content .line-name {
+.side-filter .box .content .line-name {
   text-align: center;
   padding-bottom: 10px;
 }
-.peoples-box .side-filter .box .content .line-slider {
+.side-filter .box .content .line-slider {
   position: relative;
   height: 3px;
   margin: 25px 0 30px 0;
   background: #51a8d9;
   border-radius: 3px;
 }
-.peoples-box .side-filter .box .content .line-slider .line-img {
+.side-filter .box .content .line-slider .line-img {
   position: absolute;
   left: 50%;
   top: -10px;
@@ -1834,56 +1838,56 @@ header .user .enter a:hover {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.peoples-box .side-filter .box .content input,
-.peoples-box .side-filter .box .content textarea {
+.side-filter .box .content input,
+.side-filter .box .content textarea {
   box-sizing: border-box;
   width: 100%;
 }
-.peoples-box .side-filter .box .content ::-webkit-input-placeholder {
+.side-filter .box .content ::-webkit-input-placeholder {
   color: rgba(255,255,255,0.8);
 }
-.peoples-box .side-filter .box .content input::-webkit-input-placeholder {
+.side-filter .box .content input::-webkit-input-placeholder {
   color: rgba(255,255,255,0.8);
 }
-.peoples-box .side-filter .box .content textarea::-webkit-input-placeholder {
+.side-filter .box .content textarea::-webkit-input-placeholder {
   color: rgba(255,255,255,0.8);
 }
-.peoples-box .side-filter .box .content :-moz-placeholder {
-  color: rgba(255,255,255,0.8);
-  opacity: 1;
-}
-.peoples-box .side-filter .box .content ::-moz-placeholder {
+.side-filter .box .content :-moz-placeholder {
   color: rgba(255,255,255,0.8);
   opacity: 1;
 }
-.peoples-box .side-filter .box .content :-ms-input-placeholder {
+.side-filter .box .content ::-moz-placeholder {
+  color: rgba(255,255,255,0.8);
+  opacity: 1;
+}
+.side-filter .box .content :-ms-input-placeholder {
   color: rgba(255,255,255,0.8);
 }
-.peoples-box .side-filter .box .content input,
-.peoples-box .side-filter .box .content textarea {
+.side-filter .box .content input,
+.side-filter .box .content textarea {
   color: rgba(255,255,255,0.8) !important;
 }
-.peoples-box .side-filter .box .content .chkb-list {
+.side-filter .box .content .chkb-list {
   width: 100%;
   padding-top: 15px;
   text-align: left;
 }
-.peoples-box .side-filter .box .content .chkb-list .chkb-cell {
+.side-filter .box .content .chkb-list .chkb-cell {
   display: table-cell;
 }
-.peoples-box .side-filter .box .content .chkb-list .chkb-cell:first-child {
+.side-filter .box .content .chkb-list .chkb-cell:first-child {
   padding-right: 15px;
 }
-.peoples-box .side-filter .box .content .chkb-list .chkb-cell:last-child {
+.side-filter .box .content .chkb-list .chkb-cell:last-child {
   padding-left: 15px;
 }
-.peoples-box .side-filter .box .content .chkb-list .chkb-cell .chkb-line {
+.side-filter .box .content .chkb-list .chkb-cell .chkb-line {
   padding-bottom: 15px;
 }
-.peoples-box .side-filter .box .action {
+.side-filter .box .action {
   padding: 30px 25px 0 25px;
 }
-.peoples-box .side-filter .box .action a {
+.side-filter .box .action a {
   display: block;
   padding: 15px 20px;
   box-sizing: border-box;
@@ -1894,72 +1898,72 @@ header .user .enter a:hover {
   text-decoration: none;
   text-align: center;
 }
-.peoples-box .side-filter .box .action a:hover {
+.side-filter .box .action a:hover {
   background: #51a6d7;
 }
-.peoples-box .side-filter .boxmain .sex {
+.side-filter .boxmain .sex {
   padding-top: 20px;
   text-align: center;
 }
-.peoples-box .side-filter .boxdesc {
+.side-filter .boxdesc {
   background: #378ebf;
 }
-.peoples-box .side-filter .boxdesc .content {
+.side-filter .boxdesc .content {
   text-align: center;
 }
-.peoples-box .side-filter .boxdesc .content .line {
+.side-filter .boxdesc .content .line {
   display: inline-block;
   padding-bottom: 5px;
 }
-.peoples-box .side-filter .boxdesc .content .line:before,
-.peoples-box .side-filter .boxdesc .content .line:after {
+.side-filter .boxdesc .content .line:before,
+.side-filter .boxdesc .content .line:after {
   content: "";
   display: table;
   clear: both;
 }
-.peoples-box .side-filter .boxdesc .content .line span {
+.side-filter .boxdesc .content .line span {
   float: left;
 }
-.peoples-box .side-filter .boxdesc .content .line span.count {
+.side-filter .boxdesc .content .line span.count {
   margin: 0px 0 0 5px;
   padding: 1px 7px 3px 7px;
   border-radius: 15px;
   font-size: 12px;
   background: #3180ac;
 }
-.peoples-box .side-filter .boxdesc .content .line-slider {
+.side-filter .boxdesc .content .line-slider {
   margin: 10px 0 30px 0;
   background: #2c7aa7;
 }
-.peoples-box .side-filter .boxdesc textarea {
+.side-filter .boxdesc textarea {
   background: #2c7aa7;
   border-color: #2c7aa7;
 }
-.peoples-box .side-filter .boxdesc textarea:hover {
+.side-filter .boxdesc textarea:hover {
   border-color: #8cc9eb;
 }
-.peoples-box .side-filter .boxfound {
+.side-filter .boxfound {
   background: #60b7e8;
 }
-.peoples-box .side-filter .boxfound textarea {
+.side-filter .boxfound textarea {
   background: #51a8d9;
 }
-.peoples-box .side-filter .boxfound .irs .irs-line {
+.side-filter .boxfound .irs .irs-line {
   background: #51a8d9;
 }
-.peoples-box .side-filter .boxfound .irs .irs-diapason {
+.side-filter .boxfound .irs .irs-diapason {
   background: #3e91c5;
 }
-.peoples-box .side-filter .boxfound .irs .irs-from {
+.side-filter .boxfound .irs .irs-from {
   background: #3e91c5;
 }
-.peoples-box .side-filter .boxfound .irs .irs-to {
+.side-filter .boxfound .irs .irs-to {
   background: #3e91c5;
 }
-.peoples-box .side-filter .boxfound .irs .irs-single {
+.side-filter .boxfound .irs .irs-single {
   background: #3e91c5;
 }
-.peoples-box .side-filter span.ask-pop {
+.side-filter span.ask-pop {
   position: relative;
   display: inline-block;
   width: 19px;
@@ -1971,14 +1975,14 @@ header .user .enter a:hover {
   -webkit-transition: opacity 0.3s ease-out;
           transition: opacity 0.3s ease-out;
 }
-.peoples-box .side-filter span.ask-pop.active,
-.peoples-box .side-filter span.ask-pop:hover {
+.side-filter span.ask-pop.active,
+.side-filter span.ask-pop:hover {
   opacity: 1;
 }
-.peoples-box .side-filter span.ask-pop.bg-dark {
+.side-filter span.ask-pop.bg-dark {
   background: url("../img/i-ask2.png") no-repeat;
 }
-.peoples-box .side-filter span.ask-pop.active:after {
+.side-filter span.ask-pop.active:after {
   position: absolute;
   left: 0px;
   top: 31px;
@@ -1989,7 +1993,7 @@ header .user .enter a:hover {
   border-width: 0 9px 9px 9px;
   border-color: transparent transparent #c1dff0 transparent;
 }
-.peoples-box .side-filter .ask-pop-text {
+.side-filter .ask-pop-text {
   display: none;
   margin: -5px 25px 25px 25px;
   padding: 15px;
@@ -1999,7 +2003,7 @@ header .user .enter a:hover {
   background: #fff;
   border-radius: 5px;
 }
-.peoples-box .side-filter .pad-bot {
+.side-filter .pad-bot {
   margin-bottom: 30px;
 }
 .people-popup {
