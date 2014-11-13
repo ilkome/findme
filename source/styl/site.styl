@@ -32,7 +32,38 @@ a.btn-blue-big
 	
 .pad30t10b
 	padding 30px 0 10px 0
-
+.pager
+	clear both
+	padding 40px 0
+	clearfix() 
+	&-name
+		float left
+		padding-right 20px
+		font-size 18px
+		color #4E5255
+	ul&-pages
+		lino()
+		float left
+		margin-top -7px
+		li
+			display inline-block
+			a
+				display block
+				padding 10px 15px
+				border-radius 4px
+				tdn() 
+				&:hover
+					background #4ca8e1
+					color #fff
+		li.active
+			a
+				color #fff
+				background #60b7e8
+.pager-nopad
+	padding-left 0
+	padding-bottom 0				
+.pager-pad
+	padding-left 25px
 
 //	ШАПКА
 // ===============================================
@@ -557,10 +588,10 @@ header
 		display table-cell 
 		vertical-align top
 		width 80%
-		border-radius 4px;
 		padding 0 30px 0 20px
 		table
 			width 100%;
+			border-radius 4px;
 			td
 				text-align center;
 				vertical-align middle;
@@ -605,7 +636,11 @@ header
 					&:nth-child(even)
 						td
 							background #ffffff;
-
+				tr:last-child
+					td:last-child
+						border-radius 0 0 4px 0
+					td:first-child
+						border-radius 0 0 0 4px
 			.sex
 				padding-left 20px;
 				&.m
