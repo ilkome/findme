@@ -1,7 +1,7 @@
 /*
-	Gulp shik v2.2
+	Gulp shik v2.3
 
-	Илья Шикарный
+	Илья Комичев
 	shikarniy.com
 */
 
@@ -43,7 +43,8 @@ gulp.task('customwatch', function() {
 		
 	//	Stylys
 	customwatch(['../source/styl/*.styl', '!../source/styl/common.styl'])
-		.pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+		//.pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+		.pipe(plumber())
 		.pipe(stylus())
 		.pipe(prefix())
 		.pipe(connect.reload())
@@ -51,7 +52,8 @@ gulp.task('customwatch', function() {
 	
 	//	Jade
 	customwatch(['../source/jade/*.jade', '!../source/jade/_*.jade'])
-		.pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+		//.pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+		.pipe(plumber())
 		.pipe(jade({
 			pretty: true
 		}))
