@@ -6,9 +6,20 @@
 */
 
 $(document).ready(function() {
-		$(".sideinfo a").on("click", function() {
-			$("table tr.hide2").toggle();
-		})
+	
+
+	// Всплывающая подсказка
+	function tooltip(){
+		$(".js-tooltip-item").hover(
+			function(){
+				$(this).find(".js-tooltip-hits").stop().fadeIn(300)
+			}, 
+			function(){
+				$(this).find(".js-tooltip-hits").stop().fadeOut(300)
+			}
+		);	
+	}
+	tooltip();
 
 
 	//	СЛАЙДЕРЫ ЗНАЧЕНИЙ
