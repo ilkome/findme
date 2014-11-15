@@ -3,10 +3,10 @@ function initializeMap() {
 	// проверяем есть ли карта на странице
 	if ( $('#map').length) {
 		// ресайзим враппер при загрузке и ресайзе окна
-		$('.map-wrapper').height( $('body').height() - $('footer').height() - $('header').height() );	
+		$('.map-wrapper').height( $(window).outerHeight() - $('footer').outerHeight() - $('header').outerHeight() + 34);	
 		
 		$(window).on('resize', function() {
-			$('.map-wrapper').height( $('body').height() - $('footer').height() - $('header').height() );	
+			$('.map-wrapper').height( $(window).height() - $('footer').height() - $('header').height() + 34);	
 		})
 		// стилизация карты
 		findmeStyle = [

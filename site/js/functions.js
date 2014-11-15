@@ -6,7 +6,6 @@
 */
 
 $(document).ready(function() {
-	
 
 	// Всплывающая подсказка
 	function tooltip(){
@@ -182,5 +181,67 @@ $(document).ready(function() {
 	// map.js
 	initializeMap();
 
+
+
+	// ФИКСИРОВАННАЯ ШАПКА
+	// ==================================================		
+	
+	
+	function checkFixed(){
+		var headerHeight = $("header").outerHeight();
+		var searchHeight = $(".topfilter").outerHeight();
+		if ($(".topfilter")[0]) {
+			var search_elem_offset = $(".topfilter").offset().top;
+		}
+
+		// If windows size is not enought
+		if ($(window).height() <= 750 || $(window).width() < 1360) {
+
+			$('header').removeClass("header-fixed")
+			$('main').css({paddingTop:0});
+			
+			if ($(".topfilter")[0]) {
+				var search_elem_offset = $(".topfilter").offset().top;
+				$(".topfilter").removeClass("topfilter-fixed").css({top:0})
+			}
+		} else {
+			// If windows size is good size
+			$('header').addClass("header-fixed")
+			
+			$('main').css({
+				paddingTop:headerHeight
+			});
+
+			if ($(".topfilter")[0]) {
+				if($(window).scrollTop()+headerHeight >= search_elem_offset) {
+					$(".topfilter").addClass("topfilter-fixed").css({top:headerHeight});
+					$('main').css({
+						paddingTop:headerHeight+searchHeight
+					});
+				}
+			}
+
+			$(window).scroll(function () {
+				var scrollPadding = $(window).scrollTop()+headerHeight;
+
+				// Scroll get search position
+				if (search_elem_offset <= scrollPadding) {
+					// Header fixed
+					if ($('header').css('position') == 'fixed') {
+						$(".topfilter").addClass("topfilter-fixed").css({top:headerHeight})
+						$('main').css({paddingTop:headerHeight+searchHeight});
+					}
+				} else {
+					if ($('header').css('position') == 'fixed') {
+						$(".topfilter").removeClass("topfilter-fixed").css({top:0})
+						$('main').css({paddingTop:headerHeight});
+					}
+				}
+			});
+		}
+	};
+	// Run checkFixed
+	checkFixed();
+	$(window).on('resize', checkFixed);
 });
 
