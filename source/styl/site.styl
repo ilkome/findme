@@ -943,6 +943,7 @@ header.header-fixed
 					border-color: transparent transparent #378dbf transparent;
 		.menu-big
 			left -75px; top 50px; bottom auto;
+
 			
 .side-filter
 	display table-cell
@@ -951,8 +952,9 @@ header.header-fixed
 	color #000; 
 	clearfix(); 
 	.side-ins
+		position relative
 		background #60b7e8; border-radius 10px;
-		overflow hidden
+		clearfix() 
 	.box
 		padding 30px 0; color #fff; 
 		h3 
@@ -1070,6 +1072,32 @@ header.header-fixed
 
 	.pad-bot
 		margin-bottom 30px;
+.filter-count-pop
+	position absolute 
+	left -283px 
+	top 0px
+	width 250px
+	padding 10px 20px
+	text-align right
+	white-space nowrap
+	color #fff; tdn(); 
+	background #378EBF;
+	border-radius 4px
+	a
+		color #fff;
+		text-decoration underline
+		&:hover
+			tdn() 
+	&:after
+		content " "
+		position absolute 
+		right -9px 
+		top 12px
+		width 0px
+		height 0px
+		border-style solid
+		border-width 7.5px 0 7.5px 9px
+		border-color transparent transparent transparent #378EBF
 
 
 //	ОДИН ПОЛЬЗОВАТЕЛЬ

@@ -1894,9 +1894,15 @@ header.header-fixed {
   clear: both;
 }
 .side-filter .side-ins {
+  position: relative;
   background: #60b7e8;
   border-radius: 10px;
-  overflow: hidden;
+}
+.side-filter .side-ins:before,
+.side-filter .side-ins:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .side-filter .box {
   padding: 30px 0;
@@ -2098,6 +2104,37 @@ header.header-fixed {
 }
 .side-filter .pad-bot {
   margin-bottom: 30px;
+}
+.filter-count-pop {
+  position: absolute;
+  left: -283px;
+  top: 0px;
+  width: 250px;
+  padding: 10px 20px;
+  text-align: right;
+  white-space: nowrap;
+  color: #fff;
+  text-decoration: none;
+  background: #378ebf;
+  border-radius: 4px;
+}
+.filter-count-pop a {
+  color: #fff;
+  text-decoration: underline;
+}
+.filter-count-pop a:hover {
+  text-decoration: none;
+}
+.filter-count-pop:after {
+  content: " ";
+  position: absolute;
+  right: -9px;
+  top: 12px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 9px;
+  border-color: transparent transparent transparent #378ebf;
 }
 .people-popup {
   width: 1100px;
