@@ -63,6 +63,7 @@ $(document).ready(function() {
 		hideMinMax: true,
 	});
 
+
 	//	ИНТЕРАКТИВ
 	//=================================================
 	$(".instruction-block .item .welcome").click(function (e) {
@@ -71,8 +72,6 @@ $(document).ready(function() {
 		var item = thisis.closest(".item");
 		var allItems = thisis.closest(".instruction-block").find(".item");
 		var target = $(e.target).closest(".item")
-
-		
 
 		if (!target.hasClass("active")) {
 			allItems.removeClass("active");
@@ -116,14 +115,13 @@ $(document).ready(function() {
 
 	$(".more a.big").on("click", function(e){
 		e.preventDefault()
-		$(this).toggleClass("active")
-		$(this).parent().parent().find(".menu-big").fadeToggle(300)
-	});
+		$(".menu-big").stop().fadeOut()
+		$(".more a.big").removeClass("active")
 
-	$(".askphoto a.big").on("click", function(e){
-		e.preventDefault()
-		$(this).toggleClass("active")
-		$(this).parent().parent().find(".menu-big").fadeToggle(300)
+		if(!$(this).closest(".js-show-info").find(".menu-big:visible").length) {
+			$(this).addClass("active")
+		}
+		$(this).closest(".js-show-info").find(".menu-big").stop().fadeToggle(300)
 	});
 
 
@@ -167,26 +165,35 @@ $(document).ready(function() {
 			$('.select-wrap .option-list').slideUp(300);
 			$('.select-wrap .select').removeClass('active');
 		}
+		// Info
+		if ($('.menu-big:visible').length && !$(e.target).closest('.js-show-info').length){
+			$(".menu-big").fadeOut(300)
+			$(".js-show-info a.big").removeClass("active")
+		}
 	});
 
 	// Закрытие по клавише Esc 
 	$(document).keyup(function(e){
 		if (e.keyCode == 27) {
 			$('.select-wrap .option-list').slideUp(300);
-			$(".atlas-circle").fadeOut()
+			// Info
+			$(".menu-big").fadeOut(300)
+			$(".more a.big").removeClass("active")
+			// Ask for photo
+			$(".ask-pop-text").fadeOut(300)
 		}
 	});
 
+
 	// Запускаем карту
 	// map.js
+	// ==================================================	
 	initializeMap();
 
 
 
 	// ФИКСИРОВАННАЯ ШАПКА
-	// ==================================================		
-	
-	
+	// ==================================================			
 	function checkFixed(){
 		var headerHeight = $("header").outerHeight();
 		var searchHeight = $(".topfilter").outerHeight();

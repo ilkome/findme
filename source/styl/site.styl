@@ -711,30 +711,6 @@ header.header-fixed
 					border-radius 15px;
 					&:hover
 						background #fbfbfb url("../img/i-map.png") 15px center no-repeat;
-			.more
-				position relative;
-				> a
-					position relative;
-					display inline-block;
-					margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
-					color #fff; tdn(); 
-					background #60b7e8;
-					&:hover
-						background-color #77c1eb;
-					&.big
-						background #60b7e8 url("../img/points.png") center center no-repeat;
-						&:hover
-							background-color #77c1eb;
-						&.active
-							background-color #4da9e3; cursor pointer;
-							&:after
-								position absolute; left 9px; top -20px; 
-								content " "; 
-								width: 0;
-								height: 0;
-								border-style: solid;
-								border-width: 9px 9px 0 9px;
-								border-color: #378dbf transparent transparent transparent;
 				.menu-big
 					display none;
 					overflow hidden;
@@ -839,45 +815,6 @@ header.header-fixed
 										background-color: #4497C6;
 									span.blue4
 										background-color: #257AAA;
-					.more
-						position relative; padding-top 15px;
-						> a
-							position relative;
-							display inline-block;
-							margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
-							color #fff; tdn(); 
-							background #60b7e8;
-							&:hover
-								background-color #77c1eb;
-							&.big
-								background #60b7e8 url("../img/points.png") center center no-repeat;
-								&:hover
-									background-color #77c1eb;
-								&.active
-									cursor pointer; background-color #4da9e3;
-									&:after
-										position absolute; left 9px; top -20px; 
-										content " "; 
-										width: 0;
-										height: 0;
-										border-style: solid;
-										border-width: 9px 9px 0 9px;
-										border-color: #378dbf transparent transparent transparent;
-						.menu-big
-							display none;
-							overflow hidden;
-							position absolute; width 100%; left -5px; bottom 50px; 
-							margin 0 -35px; padding 0 40px;
-							background #378ebf; border-radius 5px;
-							ul
-								lino();
-								li
-									margin 0 -40px; full();
-									a
-										display block; padding 5px 10px;
-										color #fff; tdn();
-										&:hover
-											background #56a4d0; 
 			.info
 				display table-cell 
 				background #fff; border-radius 0 10px 10px 0;
@@ -943,8 +880,70 @@ header.header-fixed
 						background url("../img/i-phone.png") 0 center no-repeat;
 						border-radius 15px;
 
-	// - - - - - - - - - - - - //
-		
+// - - - - - - - - - - - - //
+.more
+	position relative;
+	> a
+		position relative;
+		display inline-block;
+		margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+		color #fff; tdn(); 
+		background #60b7e8;
+		&:hover
+			background-color #77c1eb;
+	.show-info
+		> a.big
+			position relative;
+			display inline-block;
+			margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
+			color #fff; tdn(); 
+			background #60b7e8;
+			background #60b7e8 url("../img/points.png") center center no-repeat;
+			&:hover
+				background-color #77c1eb;
+			&.active
+				background-color #4da9e3; cursor pointer;
+				&:after
+					position absolute; left 9px; top -20px; 
+					content " "; 
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 9px 9px 0 9px;
+					border-color: #378dbf transparent transparent transparent;
+		.menu-big
+			z-index 10
+			display none;
+			overflow hidden;
+			position absolute; 
+			width auto;
+
+			left 30px; 
+			bottom 50px; 
+			padding 0 40px;
+			background #378ebf; border-radius 5px;
+			ul
+				lino();
+				li
+					margin 0 -40px; full();
+					a
+						display block; padding 5px 10px;
+						color #fff; tdn();
+						white-space nowrap 
+						&:hover
+							background #56a4d0; 
+.more-down
+	.show-info
+		> a.big
+			&.active
+				&:after
+					left 9px;
+					top 42px; 
+					border-width: 0 9px 9px 9px;
+					border-color: transparent transparent #378dbf transparent;
+		.menu-big
+			left -75px; top 50px; bottom auto;
+			
 .side-filter
 	display table-cell
 	vertical-align top
@@ -1119,40 +1118,6 @@ header.header-fixed
 					background url("../img/sex-w.png") 0 center no-repeat; 
 			.askphoto
 				position absolute; right 10px; top 25px; 
-				> a
-					display inline-block; margin 0 3px; padding 5px 15px; border-radius 3px; vertical-align middle;
-					color #fff; tdn(); 
-					background #60b7e8;
-					&:hover
-						background-color #4da9e3; 
-					&.big
-						background #60b7e8 url("../img/points.png") center center no-repeat;
-						&:hover, &.active
-							background-color #4da9e3;
-						&.active
-							&:after
-								position absolute; left 9px; top 42px; 
-								content " "; 
-								width: 0;
-								height: 0;
-								border-style: solid;
-								border-width: 0 9px 9px 9px;
-								border-color: transparent transparent #378dbf transparent;
-				.menu-big
-					display none;
-					overflow hidden;
-					position absolute; width 110px; left -40px; top 50px; 
-					margin 0 -35px; padding 0 40px;
-					background #378ebf; border-radius 5px;
-					ul
-						lino();
-						li
-							margin 0 -40px; full();
-							a
-								display block; padding 5px 10px;
-								color #fff; tdn();
-								&:hover
-									background #56a4d0; 
 			.colors
 				position absolute; left 75px; top 160px; 
 				.item
@@ -1696,101 +1661,6 @@ header.header-fixed
 					display inline-block; margin 0 20px;
 					label
 						color #4E5255; 
-		// - - - - - - - - - - - - //
-			
-		/*.physique
-			padding-bottom 50px;
-			.content
-				display flex; justify-content space-between; justify-content center;
-				.item
-					width 170px; text-align center;
-					anim-op();
-					&:hover
-						opacity 0.7;
-					a
-						tdn();
-					.prev
-						position relative;
-						width 102px; height 257px; margin 0 auto;
-						&.n
-							background url("../img/people-man-n.png") center center no-repeat; 
-						&.t
-							background url("../img/people-man-t.png") center center no-repeat; 
-						&.b
-							background url("../img/people-man-b.png") center center no-repeat; 
-						&.g
-							background url("../img/people-girl-n.png") center center no-repeat;
-					.name 
-						padding-top 25px;
-				.item.active
-					.name
-						color #60b7e8; */
-		
-		// - - - - - - - - - - - - //
-		
-		/*.colorbox
-			padding-bottom 50px;
-			.content
-				display flex; justify-content space-between; justify-content center;
-				.item
-					text-align center; padding 0 20px;
-					a
-						tdn();
-						&:hover
-							.prev
-								border-color #8fccef; 
-							.color
-								width 35px; height 35px;
-							.name
-								color #8fccef; 
-					.prev
-						position relative; display table-cell; width 60px; height 60px;
-						vertical-align middle; text-align center;
-						border 2px solid #e7e7e7; border-radius 30px;
-						anim();
-						.color
-							position relative; display inline-block; width 25px; height 25px;
-							vertical-align middle;
-							border-radius 25px;
-							anim();
-							&.color1
-								background #42464c; 
-							&.color2
-								background #6b6d71; 
-							&.color3
-								background #bb6d3e; 
-							&.color4
-								background #99856f; 
-							&.color5
-								background #aaa154; 
-							&.color6
-								background #d1dde4; 
-							&.color7
-								background none;
-								border 2px solid #e7e7e7;
-							&.color8
-								background #2c77a2; 
-							&.color9
-								background #1fa2ec; 
-							&.color10
-								background #d1dde4; 
-							&.color11
-								background #5eac3b; 
-							&.color12
-								background #b3a555; 
-							&.color13
-								background #635750; 
-					.name 
-						padding-top 15px;
-						anim();
-				.item.active
-					.prev
-						border-color #8fccef; 
-					.name
-						color #60b7e8; */
-
-		// - - - - - - - - - - - - //
-		
 		.signs
 			padding 0 18%;
 			textarea

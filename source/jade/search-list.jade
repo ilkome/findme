@@ -6,156 +6,7 @@ html(lang="ru")
 		#shikarniy
 			.hide
 				.people-popup.remodal(data-remodal-id="people-popup")
-					.people-item
-						.leftbl
-							.prevbl
-								.name Сидоров Константин Викторович
-								.source
-									strong Источник данных: 
-									| Со слов пациента 
-								.sex.m Мужчина
-								.askphoto
-									a.big &nbsp;
-									.menu-big
-										ul
-											li
-												a(href="#") Запросить фотографию
-											li
-												a(href="#") Отметить как найденного
-								.pic.n
-									.avatar
-										.no-avatar
-								.colors
-									.item
-										.text Голубой
-										.prev
-											.color.color9
-										.title Цвет глаз
-									.clear
-									.item.item-2
-										.text Рыжий
-										.prev
-											.color.color3
-										.title Цвет волос
-								.spec
-									.item
-										.graph.graph1
-										.count 36 - 40
-										.desc лет
-										.title Возраст 
-									.clear
-									.item.item-2
-										.graph.graph1
-										.count 172
-										.desc см
-										.title Рост
-								.viewbl
-									.title телосложение
-									.text Атлетическое
-							.inform
-								ul
-									li.hat
-										.inform-n Шапка
-										.inform-f
-											span.blue1
-									li.jacket
-										.inform-n Куртка
-										.inform-f
-											span.blue2
-									li.jeans
-										.inform-n Джинсы
-										.inform-f
-											span.blue3
-									li.shoes
-										.inform-n Туфли
-										.inform-f
-											span.blue4
-							.box.prim
-								.bname 
-									h3 Приметы
-								.prim-list
-									.prim-i Шрамы
-									.prim-i Тату
-									.prim-i протезы
-								.btext Умеренная сутулость, небольшое косоглазие, татуировка китайского дракона, дерущегося с азиатским львом на правом плече, отметка от кольца не безымянном пальце левой руки
-							.boxmap 
-								.bname 
-									h3 Место и обстоятельства обнаружения
-								.place
-									strong Москва  
-									| (центральный округ)
-								.btext
-									.item.item1 
-										p
-											strong Комментарии
-										p Синие потертые джинсы с дыркой на правой коленке, кроссовки Nike, синее поло с узором в ромбик на спине и рукавах.
-									.item.item2 
-										p
-											strong При себе имел
-										p В кармане джинсов - зажигалка и блок сигарет, телефон Nokia, также обнаружена спортивная сумка с документами.
-									.item.item3
-										p
-											strong Обстоятельства обнаружения
-										p В кармане джинсов - зажигалка и блок сигарет, телефон Nokia, также обнаружена спортивная сумка с документами.
-							.box.boxapplicant
-								.bname 
-									h3 Заявитель
-								.btext
-									h4 Сидоров Дмитрий Анатольевич
-									p ~
-									p 8 916 485 93 00
-									p Sidorov_Dmitry@mail.ru
-						//- - - - - - - - - - - - - - - - - - - - - - - - -
-						.rightbl
-							.nav
-								.nav-btns
-								.nav-close.close-popup
-							.found
-								.date
-									.bname Дата обнаружения
-									.bcontent
-										.item
-											.num 24
-											.day
-												.month 09
-												.year 2014
-								.place
-									.bname
-										.bg местонахождение
-									.bcontent
-										strong Название учреждения
-										p Мед. Академия им. Шмелева
-										strong Город
-										p Москва (центральный округ)
-										strong Адрес
-										p ул. Пушкина, д. Калатушкина
-										p 
-											a(href="#").map показать на карте
-										strong Телефон
-										p 8 800 40 56 75
-										strong Адрес сайт
-										p
-											a(href="#").site www.med24.ru
-										strong Режим работы
-										p Пн-пт, с 8:00 до 18:00; сб, c 10 <br>до 17:00; Вс - выходной
-							.archive
-								.bname Архив изменений
-								.bcontent
-									.item
-										a(href="#") Вчера в 18:20
-										p Со слов пациента - дополнено описание
-									.item
-										a(href="#") Два дня назад в 02:15
-										p Привезли документы - дополнено описание
-									.item
-										a(href="#") Три дня назад в 02:15
-										p Первичный осмотр реанимации - дополнено описание
-									.item
-										a(href="#") Вчера в 18:20
-										p Изменено место пребывание - изменения
-									.item
-										a(href="#") Два дня назад в 02:15
-										p Поступление пациента - создана карточка
+					include _people-item-pop
 			//- - - - - - - - - - - - - - - - - - - - - - - - -
 			header
 				.main-width
@@ -223,13 +74,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0766
 											td.name Иванов Дмитрий Сергеевич
@@ -244,13 +96,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0767
 											td.name Иванов Дмитрий Сергеевич
@@ -265,13 +118,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0765
 											td.name Сидоров Константин Викторович
@@ -286,13 +140,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0766
 											td.name Иванов Дмитрий Сергеевич
@@ -307,13 +162,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0767
 											td.name Иванов Дмитрий Сергеевич
@@ -328,13 +184,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0765
 											td.name Сидоров Константин Викторович
@@ -349,13 +206,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0766
 											td.name Иванов Дмитрий Сергеевич
@@ -370,13 +228,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0767
 											td.name Иванов Дмитрий Сергеевич
@@ -391,13 +250,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0765
 											td.name Сидоров Константин Викторович
@@ -412,13 +272,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0766
 											td.name Иванов Дмитрий Сергеевич
@@ -433,13 +294,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0767
 											td.name Иванов Дмитрий Сергеевич
@@ -454,13 +316,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0765
 											td.name Сидоров Константин Викторович
@@ -475,13 +338,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0766
 											td.name Иванов Дмитрий Сергеевич
@@ -496,13 +360,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0767
 											td.name Иванов Дмитрий Сергеевич
@@ -517,13 +382,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0765
 											td.name Сидоров Константин Викторович
@@ -538,13 +404,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0766
 											td.name Иванов Дмитрий Сергеевич
@@ -559,13 +426,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 										tr
 											td.id 0767
 											td.name Иванов Дмитрий Сергеевич
@@ -580,13 +448,14 @@ html(lang="ru")
 											td.moretd
 												.more
 													a(href="#people-popup") Подробнее
-													a(href="#").big &nbsp;
-													.menu-big
-														ul
-															li
-																a(href="#") Запросить фотографию
-															li
-																a(href="#") Отметить как найденного
+													span.show-info.js-show-info
+														a(href="#").big &nbsp;
+														.menu-big
+															ul
+																li
+																	a(href="#") Запросить фотографию
+																li
+																	a(href="#") Отметить как найденного
 								.pager
 									span.pager-name Страницы: 
 									ul.pager-pages
