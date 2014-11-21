@@ -15,12 +15,16 @@ body
 #shikarniy
 	display table
 	width 100%
-	min-width 1230px;
+	min-width 1170px;
 	height 1px;
 	height 100%;
 	.main-width 
 		position relative
-		width 1170px; padding 0 30px; margin 0 auto;
+		min-width 1100px; 
+		max-width 1400px
+		overflow hidden
+		padding 0 30px; 
+		margin 0 auto;
 	.row
 		display table-row
 // = = = = = = = = = = = = = = = = = = = = = = = = //
@@ -82,7 +86,7 @@ main
 	.wrap
 		position relative;
 		.bg
-			position absolute; right -80px; margin-top -5px; top 50%; transform translateY(-50%);
+			position absolute; left 37%; margin-top -5px; top 50%; transform translateY(-50%);
 
 			width 771px; height 694px; 
 			background url("../img/macbook.png") right center no-repeat;

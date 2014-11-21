@@ -446,13 +446,15 @@ body a {
 #shikarniy {
   display: table;
   width: 100%;
-  min-width: 1230px;
+  min-width: 1170px;
   height: 1px;
   height: 100%;
 }
 #shikarniy .main-width {
   position: relative;
-  width: 1170px;
+  min-width: 1100px;
+  max-width: 1400px;
+  overflow: hidden;
   padding: 0 30px;
   margin: 0 auto;
 }
@@ -542,7 +544,7 @@ main .wrap {
 }
 main .wrap .bg {
   position: absolute;
-  right: -80px;
+  left: 37%;
   margin-top: -5px;
   top: 50%;
   -webkit-transform: translateY(-50%);
