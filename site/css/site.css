@@ -1655,7 +1655,8 @@ header.header-fixed {
   float: right;
   padding-top: 2px;
 }
-.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f span {
+.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f span,
+.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f .circle-box {
   display: block;
   width: 14.375px;
   height: 14.375px;
@@ -1665,13 +1666,13 @@ header.header-fixed {
   width: 12.375px;
   height: 12.375px;
 }
-.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f span.blue2 {
+.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f .blue2 {
   background-color: #56aad9;
 }
-.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f span.blue3 {
+.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f .blue3 {
   background-color: #4497c6;
 }
-.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f span.blue4 {
+.peoples-box .peoples-list .people .prev .ins .inform ul li .inform-f .blue4 {
   background-color: #257aaa;
 }
 .peoples-box .peoples-list .people .info {
@@ -2409,25 +2410,26 @@ header.header-fixed {
 .people-item .leftbl .inform ul li .inform-n {
   float: left;
 }
-.people-item .leftbl .inform ul li .inform-f {
+.people-item .leftbl .inform .inform-f {
   float: left;
   padding-top: 2px;
   padding-left: 20px;
 }
-.people-item .leftbl .inform ul li .inform-f span {
+.people-item .leftbl .inform .inform-f span,
+.people-item .leftbl .inform .inform-f .color {
   display: block;
   width: 14.375px;
   height: 14.375px;
   background-color: #5fb7e7;
   border-radius: 50%;
 }
-.people-item .leftbl .inform ul li .inform-f span.blue2 {
+.people-item .leftbl .inform .inform-f .blue2 {
   background-color: #56aad9;
 }
-.people-item .leftbl .inform ul li .inform-f span.blue3 {
+.people-item .leftbl .inform .inform-f .blue3 {
   background-color: #4497c6;
 }
-.people-item .leftbl .inform ul li .inform-f span.blue4 {
+.people-item .leftbl .inform .inform-f .blue4 {
   background-color: #257aaa;
 }
 .people-item .leftbl .prim {
