@@ -40,28 +40,3 @@ head
 			$.Placeholder.init();
 		});
 	<![endif]-->
-
-
-//- Удалить строки ниже, после окончания работы над версткой
-//- Меню для удобного просмотра страниц верстки
-div.system-menu
-	a(href="about.html") about 
-	a(href="add.html") add 
-	a(href="instruction.html") instruction 
-	a(href="main.html") main
-	a(href="offer.html") offer
-	a(href="organisation.html") organisation
-	a(href="organisation-list.html") organisation-list
-	a(href="organisation-search-list.html") organisation-search-list
-	a(href="organisation-search-map.html") organisation-search-map
-	a(href="popups.html") popups
-	a(href="search-list.html") search-list
-	a(href="search.html") search
-	a(href="show.html") show
-
-	style
-		| .system-menu {position: fixed; width:30px; z-index: 999; background: #fff; opacity:0; overflow:hidden;}
-		| .system-menu:hover {width:auto; opacity: 1;}
-		| .system-menu a {display:block; padding:5px 10px; font-size:12px; color: grey;}
-		| .system-menu a:hover {background:#e6e6e6; text-decoration:none;}
-		| .system-menu p.sep {margin:0; padding:5px 10px; min-height:2px; font-size:12px; border-top: 2px solid grey;}
