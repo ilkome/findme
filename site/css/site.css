@@ -3610,11 +3610,6 @@ header.header-fixed {
 .remodal_lock {
   overflow-y: hidden;
 }
-.remodal_lock .header-fixed,
-.remodal_lock .topfilter-fixed {
-  box-sizing: border-box;
-  width: 99%;
-}
 .footer-fix {
   position: relative;
   height: 150px;
