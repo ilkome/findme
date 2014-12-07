@@ -76,7 +76,7 @@ ul.mrno {
   margin: 0;
 }
 a {
-  color: #469fd1;
+  color: #3f90bd;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
@@ -367,7 +367,7 @@ table td {
 }
 .select-wrap ul.option-list li.active {
   color: #fff;
-  background: #60b7e8;
+  background: #828282;
   cursor: default;
 }
 .select-wrap ul.option-list li:last-child {
@@ -579,11 +579,11 @@ main .wrap .text .desc {
   line-height: 30px;
 }
 main .wrap .text .war {
-  color: #c1e7fb;
+  color: #e9f5fb;
   font-size: 14px;
 }
 main .wrap .text .war a {
-  color: #c1e7fb;
+  color: #e9f5fb;
   text-decoration: underline;
 }
 main .wrap .text .war a:hover {
