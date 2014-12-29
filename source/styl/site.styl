@@ -121,7 +121,7 @@ header
 		display table-cell
 		vertical-align middle
 		text-align center
-		padding 0 100px
+		padding 0 10px
 		full() 
 		ul
 			clearfix(); 
@@ -318,7 +318,11 @@ header.header-fixed
 //	ОРГАНИЗАЦИЯ
 // ===============================================
 .organ-block
-	margin 30px auto; padding 0 30px;
+	margin 30px auto; 
+	padding 0 30px;
+	.main-width 
+		padding 0
+		margin auto
 	.wrapperw
 		background #ececec; border-radius 5px;
 	.welcome
@@ -404,7 +408,8 @@ header.header-fixed
 				&:hover
 					background #4ca8e1
 	.peoples-box 
-		padding 0 20px
+		padding 0 0px
+		full() 
 		.peoples-list
 			position relative;
 			width 100%;
@@ -642,8 +647,6 @@ header.header-fixed
 		width 80%
 		padding 0 30px 0 20px
 		table
-			width 100%;
-			border-radius 4px;
 			td
 				text-align center;
 				vertical-align middle;
@@ -656,9 +659,9 @@ header.header-fixed
 			td.name
 				width 25%;
 			td.place
-				min-width 150px; 
+				min-width 10px; 
 			td.moretd
-				min-width 150px; 
+				min-width 10px; 
 			td.age
 				min-width 80px; 
 			thead
@@ -1978,6 +1981,7 @@ header.header-fixed
 .remodal_lock
 	overflow-y hidden
 
+
 // ПОДВАЛ
 // ===============================================
 .footer-fix
@@ -2118,7 +2122,7 @@ footer
 	&:hover
 		background-color: #77c1eb;
 		text-decoration: none
-		
+
 
 //	ЦВЕТА
 // ==============================================

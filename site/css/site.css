@@ -590,7 +590,7 @@ header .menu {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  padding: 0 100px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 header .menu ul {
@@ -908,6 +908,10 @@ header.header-fixed {
   margin: 30px auto;
   padding: 0 30px;
 }
+.organ-block .main-width {
+  padding: 0;
+  margin: auto;
+}
 .organ-block .wrapperw {
   background: #ececec;
   border-radius: 5px;
@@ -1056,7 +1060,8 @@ header.header-fixed {
   background: #4ca8e1;
 }
 .organ-block .peoples-box {
-  padding: 0 20px;
+  padding: 0 0px;
+  box-sizing: border-box;
 }
 .organ-block .peoples-box .peoples-list {
   position: relative;
@@ -1399,10 +1404,6 @@ header.header-fixed {
   width: 80%;
   padding: 0 30px 0 20px;
 }
-.peoples-box .peoples-table-box table {
-  width: 100%;
-  border-radius: 4px;
-}
 .peoples-box .peoples-table-box table td {
   text-align: center;
   vertical-align: middle;
@@ -1421,10 +1422,10 @@ header.header-fixed {
   width: 25%;
 }
 .peoples-box .peoples-table-box table td.place {
-  min-width: 150px;
+  min-width: 10px;
 }
 .peoples-box .peoples-table-box table td.moretd {
-  min-width: 150px;
+  min-width: 10px;
 }
 .peoples-box .peoples-table-box table td.age {
   min-width: 80px;
